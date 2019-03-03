@@ -1,0 +1,484 @@
+fileFormatVersion: 2
+guid: 08416077544823e4eb323780a1e46489
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: wugui3:bottom
+    100002: wugui3:joint21
+    100004: wugui3:joint22
+    100006: wugui3:joint23
+    100008: wugui3:joint24
+    100010: wugui3:joint25
+    100012: wugui3:joint26
+    100014: wugui3:joint27
+    100016: wugui3:joint28
+    100018: wugui3:joint29
+    100020: wugui3:joint30
+    100022: wugui3:joint31
+    100024: wugui3:joint32
+    100026: wugui3:joint33
+    100028: wugui3:joint34
+    100030: wugui3:joint35
+    100032: wugui3:joint36
+    100034: wugui3:joint37
+    100036: wugui3:joint38
+    100038: wugui3:joint39
+    100040: wugui3:joint40
+    100042: wugui3:joint41
+    100044: wugui3:joint42
+    100046: wugui3:joint43
+    100048: wugui3:joint44
+    100050: wugui3:joint45
+    100052: wugui3:joint46
+    100054: wugui3:joint47
+    100056: wugui3:joint48
+    100058: wugui3:joint49
+    100060: wugui3:joint50
+    100062: wugui3:joint51
+    100064: wugui3:joint52
+    100066: wugui3:joint53
+    100068: wugui3:nurbsCircle2
+    100070: wugui3:pCube2
+    100072: wugui3:transform2
+    100074: //RootNode
+    100076: dianman
+    100078: dianman_waike1
+    100080: joint1
+    100082: joint10
+    100084: joint2
+    100086: joint3
+    100088: joint4
+    100090: joint5
+    100092: joint6
+    100094: joint7
+    100096: joint8
+    100098: joint9
+    100100: nurbsCircle1
+    100102: transform1
+    400000: wugui3:bottom
+    400002: wugui3:joint21
+    400004: wugui3:joint22
+    400006: wugui3:joint23
+    400008: wugui3:joint24
+    400010: wugui3:joint25
+    400012: wugui3:joint26
+    400014: wugui3:joint27
+    400016: wugui3:joint28
+    400018: wugui3:joint29
+    400020: wugui3:joint30
+    400022: wugui3:joint31
+    400024: wugui3:joint32
+    400026: wugui3:joint33
+    400028: wugui3:joint34
+    400030: wugui3:joint35
+    400032: wugui3:joint36
+    400034: wugui3:joint37
+    400036: wugui3:joint38
+    400038: wugui3:joint39
+    400040: wugui3:joint40
+    400042: wugui3:joint41
+    400044: wugui3:joint42
+    400046: wugui3:joint43
+    400048: wugui3:joint44
+    400050: wugui3:joint45
+    400052: wugui3:joint46
+    400054: wugui3:joint47
+    400056: wugui3:joint48
+    400058: wugui3:joint49
+    400060: wugui3:joint50
+    400062: wugui3:joint51
+    400064: wugui3:joint52
+    400066: wugui3:joint53
+    400068: wugui3:nurbsCircle2
+    400070: wugui3:pCube2
+    400072: wugui3:transform2
+    400074: //RootNode
+    400076: dianman
+    400078: dianman_waike1
+    400080: joint1
+    400082: joint10
+    400084: joint2
+    400086: joint3
+    400088: joint4
+    400090: joint5
+    400092: joint6
+    400094: joint7
+    400096: joint8
+    400098: joint9
+    400100: nurbsCircle1
+    400102: transform1
+    4300000: wugui3:pCube2
+    4300002: dianman_waike1
+    7400000: move
+    7400002: heart
+    7400004: death
+    9500000: //RootNode
+    13700000: wugui3:pCube2
+    13700002: dianman_waike1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wugui3:bottom
+        weight: 1
+      - path: wugui3:nurbsCircle2
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24/wugui3:joint25
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24/wugui3:joint25/wugui3:joint26
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31/wugui3:joint32
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31/wugui3:joint32/wugui3:joint33
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36/wugui3:joint37
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36/wugui3:joint37/wugui3:joint38
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39/wugui3:joint40
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39/wugui3:joint40/wugui3:joint41
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46/wugui3:joint47
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46/wugui3:joint47/wugui3:joint48
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51/wugui3:joint52
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51/wugui3:joint52/wugui3:joint53
+        weight: 1
+      - path: wugui3:pCube2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wugui3:bottom
+        weight: 1
+      - path: wugui3:nurbsCircle2
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24/wugui3:joint25
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24/wugui3:joint25/wugui3:joint26
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31/wugui3:joint32
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31/wugui3:joint32/wugui3:joint33
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36/wugui3:joint37
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36/wugui3:joint37/wugui3:joint38
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39/wugui3:joint40
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39/wugui3:joint40/wugui3:joint41
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46/wugui3:joint47
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46/wugui3:joint47/wugui3:joint48
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51/wugui3:joint52
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51/wugui3:joint52/wugui3:joint53
+        weight: 1
+      - path: wugui3:pCube2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 48
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: wugui3:bottom
+        weight: 1
+      - path: wugui3:nurbsCircle2
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24/wugui3:joint25
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint23/wugui3:joint24/wugui3:joint25/wugui3:joint26
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31/wugui3:joint32
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint27/wugui3:joint28/wugui3:joint29/wugui3:joint30/wugui3:joint31/wugui3:joint32/wugui3:joint33
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36/wugui3:joint37
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint34/wugui3:joint35/wugui3:joint36/wugui3:joint37/wugui3:joint38
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39/wugui3:joint40
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint39/wugui3:joint40/wugui3:joint41
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46/wugui3:joint47
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint42/wugui3:joint43/wugui3:joint44/wugui3:joint45/wugui3:joint46/wugui3:joint47/wugui3:joint48
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51/wugui3:joint52
+        weight: 1
+      - path: wugui3:nurbsCircle2/wugui3:transform2/wugui3:joint21/wugui3:joint22/wugui3:joint49/wugui3:joint50/wugui3:joint51/wugui3:joint52/wugui3:joint53
+        weight: 1
+      - path: wugui3:pCube2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

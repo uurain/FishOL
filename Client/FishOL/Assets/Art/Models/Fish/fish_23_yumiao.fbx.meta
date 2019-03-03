@@ -1,0 +1,246 @@
+fileFormatVersion: 2
+guid: 21ebf4b812f18164ab32b531ed3c5696
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: yumiao:joint1
+    100004: yumiao:joint2
+    100006: yumiao:joint3
+    100008: yumiao:joint4
+    100010: yumiao:joint5
+    100012: yumiao:joint6
+    100014: yumiao:joint7
+    100016: yumiao:joint8
+    100018: yumiao:nurbsCircle1
+    100020: yumiao:transform1
+    100022: yumiao:yumiao_Box002
+    400000: //RootNode
+    400002: yumiao:joint1
+    400004: yumiao:joint2
+    400006: yumiao:joint3
+    400008: yumiao:joint4
+    400010: yumiao:joint5
+    400012: yumiao:joint6
+    400014: yumiao:joint7
+    400016: yumiao:joint8
+    400018: yumiao:nurbsCircle1
+    400020: yumiao:transform1
+    400022: yumiao:yumiao_Box002
+    4300000: yumiao:yumiao_Box002
+    7400000: move
+    7400002: death
+    7400004: heart
+    9500000: //RootNode
+    13700000: yumiao:yumiao_Box002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: yumiao:nurbsCircle1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint2
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6/yumiao:joint7
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6/yumiao:joint7/yumiao:joint8
+        weight: 1
+      - path: yumiao:yumiao_Box002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: yumiao:nurbsCircle1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint2
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6/yumiao:joint7
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6/yumiao:joint7/yumiao:joint8
+        weight: 1
+      - path: yumiao:yumiao_Box002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 15
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: yumiao:nurbsCircle1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint2
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6/yumiao:joint7
+        weight: 1
+      - path: yumiao:nurbsCircle1/yumiao:transform1/yumiao:joint1/yumiao:joint3/yumiao:joint4/yumiao:joint5/yumiao:joint6/yumiao:joint7/yumiao:joint8
+        weight: 1
+      - path: yumiao:yumiao_Box002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

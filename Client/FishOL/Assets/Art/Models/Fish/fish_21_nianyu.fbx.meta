@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: ce8f92c25c041364d81a1a8e1c1e1bf3
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: joint1
+    100002: joint11
+    100004: joint12
+    100006: joint13
+    100008: joint14
+    100010: joint15
+    100012: joint16
+    100014: joint17
+    100016: joint18
+    100018: joint19
+    100020: joint2
+    100022: joint20
+    100024: joint3
+    100026: joint4
+    100028: joint5
+    100030: joint6
+    100032: joint7
+    100034: joint8
+    100036: l
+    100038: l01
+    100040: nianyu02_Box002
+    100042: //RootNode
+    100044: nurbsCircle1
+    100046: r
+    100048: r01
+    100050: transform1
+    400000: joint1
+    400002: joint11
+    400004: joint12
+    400006: joint13
+    400008: joint14
+    400010: joint15
+    400012: joint16
+    400014: joint17
+    400016: joint18
+    400018: joint19
+    400020: joint2
+    400022: joint20
+    400024: joint3
+    400026: joint4
+    400028: joint5
+    400030: joint6
+    400032: joint7
+    400034: joint8
+    400036: l
+    400038: l01
+    400040: nianyu02_Box002
+    400042: //RootNode
+    400044: nurbsCircle1
+    400046: r
+    400048: r01
+    400050: transform1
+    4300000: nianyu02_Box002
+    7400000: move
+    7400002: heart
+    7400004: death
+    9500000: //RootNode
+    13700000: nianyu02_Box002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: nianyu02_Box002
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/transform1
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint2
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13/joint14
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13/joint14/joint15
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/l
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/l/l01
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/r
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/r/r01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 15
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: nianyu02_Box002
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/transform1
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint2
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13/joint14
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13/joint14/joint15
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/l
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/l/l01
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/r
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/r/r01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: nianyu02_Box002
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/transform1
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint2
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint3/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13/joint14
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint11/joint12/joint13/joint14/joint15
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18/joint19
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/joint16/joint17/joint18/joint19/joint20
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/l
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/l/l01
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/r
+        weight: 1
+      - path: nurbsCircle1/transform1/joint1/r/r01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

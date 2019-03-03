@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: dd3d435e988f1034bb7be8e558a81409
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: chi_L00
+    100002: chi_L01
+    100004: chi_R
+    100006: chi_R01
+    100008: gen
+    100010: gen01
+    100012: //RootNode
+    100014: jianyu06:Box001
+    100016: joint11
+    100018: joint12
+    100020: joint4
+    100022: joint5
+    100024: joint6
+    100026: joint8
+    100028: nurbsCircle1
+    100030: tou
+    100032: transform1
+    100034: wei00
+    100036: yan_L00
+    100038: yan_L01
+    100040: yan_R00
+    100042: yan_R01
+    100044: yanpi_L00
+    100046: yanpi_L01
+    100048: yanpi_R00
+    100050: yanpi_R01
+    400000: chi_L00
+    400002: chi_L01
+    400004: chi_R
+    400006: chi_R01
+    400008: gen
+    400010: gen01
+    400012: //RootNode
+    400014: jianyu06:Box001
+    400016: joint11
+    400018: joint12
+    400020: joint4
+    400022: joint5
+    400024: joint6
+    400026: joint8
+    400028: nurbsCircle1
+    400030: tou
+    400032: transform1
+    400034: wei00
+    400036: yan_L00
+    400038: yan_L01
+    400040: yan_R00
+    400042: yan_R01
+    400044: yanpi_L00
+    400046: yanpi_L01
+    400048: yanpi_R00
+    400050: yanpi_R01
+    4300000: jianyu06:Box001
+    7400000: move
+    7400002: heart
+    7400004: death
+    9500000: //RootNode
+    13700000: jianyu06:Box001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jianyu06:Box001
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/transform1
+        weight: 1
+      - path: nurbsCircle1/transform1/gen
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00/chi_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00/chi_L01/joint12
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R/chi_R01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R/chi_R01/joint11
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/gen01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/tou
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/tou/joint8
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_L00/yan_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_R00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_R00/yan_R01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_L00/yanpi_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_R00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_R00/yanpi_R01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jianyu06:Box001
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/transform1
+        weight: 1
+      - path: nurbsCircle1/transform1/gen
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00/chi_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00/chi_L01/joint12
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R/chi_R01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R/chi_R01/joint11
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/gen01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/tou
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/tou/joint8
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_L00/yan_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_R00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_R00/yan_R01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_L00/yanpi_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_R00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_R00/yanpi_R01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: jianyu06:Box001
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/transform1
+        weight: 1
+      - path: nurbsCircle1/transform1/gen
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00/chi_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_L00/chi_L01/joint12
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R/chi_R01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/chi_R/chi_R01/joint11
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/gen01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/tou
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/tou/joint8
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/wei00/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_L00/yan_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_R00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yan_R00/yan_R01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_L00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_L00/yanpi_L01
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_R00
+        weight: 1
+      - path: nurbsCircle1/transform1/gen/yanpi_R00/yanpi_R01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

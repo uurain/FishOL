@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1524620193
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 319b5d77b563dd660727a9e3f5bcc03d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8cfd36d84ed37a63bcb3c7ce96d93f72
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AbAsset/UI/Package/&Common/Common.bytes
+- Assets/AbAsset/UI/Package/&Common/Common@sprites.bytes
+- Assets/AbAsset/UI/Package/&Common/Common@atlas0.png
+Dependencies: []

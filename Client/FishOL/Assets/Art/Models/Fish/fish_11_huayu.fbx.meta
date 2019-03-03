@@ -1,0 +1,445 @@
+fileFormatVersion: 2
+guid: 11083f5744abefe4f9068e1d8cc474f6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bottom
+    100002: front1
+    100004: //RootNode
+    100006: joint1
+    100008: joint10
+    100010: joint11
+    100012: joint12
+    100014: joint13
+    100016: joint14
+    100018: joint15
+    100020: joint16
+    100022: joint17
+    100024: joint18
+    100026: joint2
+    100028: joint3
+    100030: joint4
+    100032: joint5
+    100034: joint6
+    100036: joint7
+    100038: joint8
+    100040: joint9
+    100042: nurbsCircle1
+    100044: pCube2
+    100046: polySurface10
+    100048: polySurface253
+    100050: polySurface9
+    100052: pPlane10
+    100054: pPlane7
+    100056: pPlane8
+    100058: pPlane9
+    100060: transform1
+    400000: bottom
+    400002: front1
+    400004: //RootNode
+    400006: joint1
+    400008: joint10
+    400010: joint11
+    400012: joint12
+    400014: joint13
+    400016: joint14
+    400018: joint15
+    400020: joint16
+    400022: joint17
+    400024: joint18
+    400026: joint2
+    400028: joint3
+    400030: joint4
+    400032: joint5
+    400034: joint6
+    400036: joint7
+    400038: joint8
+    400040: joint9
+    400042: nurbsCircle1
+    400044: pCube2
+    400046: polySurface10
+    400048: polySurface253
+    400050: polySurface9
+    400052: pPlane10
+    400054: pPlane7
+    400056: pPlane8
+    400058: pPlane9
+    400060: transform1
+    4300000: polySurface10
+    4300002: polySurface253
+    7400000: move
+    7400002: heart
+    7400004: death
+    9500000: //RootNode
+    13700000: polySurface10
+    13700002: polySurface253
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1
+    second: {fileID: 2100000, guid: e83586ef8c3745f4b9010e2a07280a2e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: Event DeathEvent has a time (0.416667) outside the clip's
+      valid range (0.000000..0.416667). It will never be fired
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: front1
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/joint1
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint3
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint11
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint11/joint12
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint15
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint15/joint16
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint13
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint13/joint14
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint17
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint17/joint18
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/polySurface9
+        weight: 1
+      - path: pCube2/transform1
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface253
+        weight: 1
+      - path: pPlane7
+        weight: 1
+      - path: pPlane8
+        weight: 1
+      - path: pPlane9
+        weight: 1
+      - path: pPlane10
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: front1
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/joint1
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint3
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint11
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint11/joint12
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint15
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint15/joint16
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint13
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint13/joint14
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint17
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint17/joint18
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/polySurface9
+        weight: 1
+      - path: pCube2/transform1
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface253
+        weight: 1
+      - path: pPlane7
+        weight: 1
+      - path: pPlane8
+        weight: 1
+      - path: pPlane9
+        weight: 1
+      - path: pPlane10
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 35
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: front1
+        weight: 1
+      - path: nurbsCircle1
+        weight: 1
+      - path: nurbsCircle1/joint1
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint3
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7/joint8
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint4/joint5/joint6/joint7/joint8/joint9
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint11
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint11/joint12
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint15
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint10/joint15/joint16
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint13
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint13/joint14
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint17
+        weight: 1
+      - path: nurbsCircle1/joint1/joint2/joint17/joint18
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/polySurface9
+        weight: 1
+      - path: pCube2/transform1
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: polySurface253
+        weight: 1
+      - path: pPlane7
+        weight: 1
+      - path: pPlane8
+        weight: 1
+      - path: pPlane9
+        weight: 1
+      - path: pPlane10
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

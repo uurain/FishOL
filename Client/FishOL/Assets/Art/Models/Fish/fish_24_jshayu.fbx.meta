@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: 34118f473cd71a74d860e4781d6838e8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: bottom
+    100002: joint33
+    100004: joint34
+    100006: joint35
+    100008: joint36
+    100010: joint37
+    100012: joint38
+    100014: joint39
+    100016: joint40
+    100018: joint41
+    100020: joint42
+    100022: joint43
+    100024: joint44
+    100026: joint45
+    100028: joint46
+    100030: joint47
+    100032: joint48
+    100034: joint49
+    100036: joint50
+    100038: joint51
+    100040: joint52
+    100042: joint53
+    100044: joint54
+    100046: joint55
+    100048: joint56
+    100050: joint57
+    100052: joint58
+    100054: joint59
+    100056: joint60
+    100058: joint61
+    100060: joint62
+    100062: joint63
+    100064: joint64
+    100066: joint65
+    100068: joint66
+    100070: left
+    100072: nurbsCircle2
+    100074: pSphere3
+    100076: //RootNode
+    100078: top1
+    100080: transform2
+    100082: wugui_bottom
+    400000: bottom
+    400002: joint33
+    400004: joint34
+    400006: joint35
+    400008: joint36
+    400010: joint37
+    400012: joint38
+    400014: joint39
+    400016: joint40
+    400018: joint41
+    400020: joint42
+    400022: joint43
+    400024: joint44
+    400026: joint45
+    400028: joint46
+    400030: joint47
+    400032: joint48
+    400034: joint49
+    400036: joint50
+    400038: joint51
+    400040: joint52
+    400042: joint53
+    400044: joint54
+    400046: joint55
+    400048: joint56
+    400050: joint57
+    400052: joint58
+    400054: joint59
+    400056: joint60
+    400058: joint61
+    400060: joint62
+    400062: joint63
+    400064: joint64
+    400066: joint65
+    400068: joint66
+    400070: left
+    400072: nurbsCircle2
+    400074: pSphere3
+    400076: //RootNode
+    400078: top1
+    400080: transform2
+    400082: wugui_bottom
+    4300000: pSphere3
+    7400000: move
+    7400002: heart
+    7400004: death
+    7400006: tease
+    9500000: //RootNode
+    13700000: pSphere3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: nurbsCircle2
+        weight: 1
+      - path: nurbsCircle2/transform2
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint36
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37/joint38
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50/joint51
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52/joint53
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54/joint55
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56/joint57
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43/joint44
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48/joint49
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      - path: top1
+        weight: 1
+      - path: wugui_bottom
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: nurbsCircle2
+        weight: 1
+      - path: nurbsCircle2/transform2
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint36
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37/joint38
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50/joint51
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52/joint53
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54/joint55
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56/joint57
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43/joint44
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48/joint49
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      - path: top1
+        weight: 1
+      - path: wugui_bottom
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 260
+      lastFrame: 280
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bottom
+        weight: 1
+      - path: left
+        weight: 1
+      - path: nurbsCircle2
+        weight: 1
+      - path: nurbsCircle2/transform2
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint36
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37/joint38
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50/joint51
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52/joint53
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54/joint55
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56/joint57
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43/joint44
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48/joint49
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      - path: top1
+        weight: 1
+      - path: wugui_bottom
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: tease
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: TeaseEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: nurbsCircle2
+        weight: 1
+      - path: nurbsCircle2/transform2
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint36
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint37/joint38
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint50/joint51
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint52/joint53
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint54/joint55
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint35/joint56/joint57
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint39/joint40/joint41/joint42/joint43/joint44
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint45/joint46/joint47/joint48/joint49
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint58/joint59/joint60/joint61
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65
+        weight: 1
+      - path: nurbsCircle2/transform2/joint33/joint34/joint62/joint63/joint64/joint65/joint66
+        weight: 1
+      - path: pSphere3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

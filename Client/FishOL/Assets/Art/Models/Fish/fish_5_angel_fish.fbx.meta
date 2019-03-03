@@ -1,0 +1,326 @@
+fileFormatVersion: 2
+guid: 3d3c514a0b85e7b47bf59afad36e0362
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: yu:aaa
+    100004: yu:ass
+    100006: yu:aw
+    100008: yu:bgrh
+    100010: yu:byjgd
+    100012: yu:cx
+    100014: yu:eerf
+    100016: yu:efe
+    100018: yu:ewqazz
+    100020: yu:jy
+    100022: yu:jyhg
+    100024: yu:mh
+    100026: yu:qqcs
+    100028: yu:rgefdg
+    100030: yu:rteb
+    100032: yu:tgty
+    100034: yu:uyu
+    100036: yu:wwe
+    100038: yu:x
+    100040: yu:xcv
+    100042: yu:yu
+    400000: //RootNode
+    400002: yu:aaa
+    400004: yu:ass
+    400006: yu:aw
+    400008: yu:bgrh
+    400010: yu:byjgd
+    400012: yu:cx
+    400014: yu:eerf
+    400016: yu:efe
+    400018: yu:ewqazz
+    400020: yu:jy
+    400022: yu:jyhg
+    400024: yu:mh
+    400026: yu:qqcs
+    400028: yu:rgefdg
+    400030: yu:rteb
+    400032: yu:tgty
+    400034: yu:uyu
+    400036: yu:wwe
+    400038: yu:x
+    400040: yu:xcv
+    400042: yu:yu
+    4300000: yu:yu
+    7400000: move
+    7400002: heart
+    7400004: death
+    9500000: //RootNode
+    13700000: yu:yu
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: move
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: yu:aaa
+        weight: 1
+      - path: yu:aaa/yu:ass
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw/yu:xcv
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw/yu:xcv/yu:wwe
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:eerf
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:eerf/yu:byjgd
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz/yu:jyhg
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz/yu:jyhg/yu:rgefdg
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:mh
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:mh/yu:uyu
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs/yu:cx
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs/yu:cx/yu:efe
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:rteb
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:rteb/yu:jy
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:tgty
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:tgty/yu:bgrh
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:x
+        weight: 1
+      - path: yu:yu
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: heart
+      takeName: Take 001
+      firstFrame: 15
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: yu:aaa
+        weight: 1
+      - path: yu:aaa/yu:ass
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw/yu:xcv
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw/yu:xcv/yu:wwe
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:eerf
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:eerf/yu:byjgd
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz/yu:jyhg
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz/yu:jyhg/yu:rgefdg
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:mh
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:mh/yu:uyu
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs/yu:cx
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs/yu:cx/yu:efe
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:rteb
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:rteb/yu:jy
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:tgty
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:tgty/yu:bgrh
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:x
+        weight: 1
+      - path: yu:yu
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 27
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 1
+        functionName: DeathEvent
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: yu:aaa
+        weight: 1
+      - path: yu:aaa/yu:ass
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw/yu:xcv
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:aw/yu:xcv/yu:wwe
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:eerf
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:eerf/yu:byjgd
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz/yu:jyhg
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:ewqazz/yu:jyhg/yu:rgefdg
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:mh
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:mh/yu:uyu
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs/yu:cx
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:qqcs/yu:cx/yu:efe
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:rteb
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:rteb/yu:jy
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:tgty
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:tgty/yu:bgrh
+        weight: 1
+      - path: yu:aaa/yu:ass/yu:x
+        weight: 1
+      - path: yu:yu
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1824105148
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: 98e1a7dcd522536d24a6e5e60d6fc526189ae91c.ab
+      Dependencies: {}
+    Info_1:
+      Name: c906718012cec99b8c7b147006583340ccc8c986.ab
+      Dependencies: {}
+    Info_2:
+      Name: c2ce4ac4ab3c9462d344ac39f90aaebf18b8e215.ab
+      Dependencies: {}
+    Info_3:
+      Name: e0075dcd155b72d5c518646b7faa798e39b5130d.ab
+      Dependencies: {}
