@@ -1,0 +1,2 @@
+[submodule "Server/leafserver"]
+	url = https://github.com/uurain/FishOL/tree/master/Server
