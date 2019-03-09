@@ -23,7 +23,7 @@ func init() {
 
 func handleEnterRoom(args []interface{}) {
 	agent := args[1].(gate.Agent)
-	uid := agent.UserData().(int)
+	uid := agent.UserData().(int32)
 	player := GetPlayer(uid)
 	if player != nil {
 		room.AckEnterRoom(player)
@@ -32,14 +32,14 @@ func handleEnterRoom(args []interface{}) {
 
 func handleLeaveRoom(args []interface{}) {
 	agent := args[1].(gate.Agent)
-	uid := agent.UserData().(int)
+	uid := agent.UserData().(int32)
 	room.AckLeaveRoom(uid)
 }
 
 func handleBullet(args []interface{}) {
 	msgInfo := args[0].(*msg.ReqAckBullet)
 	agent := args[1].(gate.Agent)
-	uid := agent.UserData().(int)
+	uid := agent.UserData().(int32)
 	player := GetPlayer(uid)
 	if player != nil {
 		if player.CanFire(msgInfo.GetBulletType()) {

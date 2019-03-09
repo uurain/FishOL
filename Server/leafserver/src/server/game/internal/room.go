@@ -50,7 +50,7 @@ func (self *Room) AddPlayer(p *Player) {
 	}
 }
 
-func (self *Room) RemovePlayer(ident int) {
+func (self *Room) RemovePlayer(ident int32) {
 	for i, v := range self.playerList {
 		if v != nil && v.Ident == ident {
 			self.playerList[i] = nil
@@ -59,7 +59,7 @@ func (self *Room) RemovePlayer(ident int) {
 	}
 }
 
-func (self *Room) GetPlayer(ident int) *Player {
+func (self *Room) GetPlayer(ident int32) *Player {
 	for _, v := range self.playerList {
 		if v != nil && v.Ident == ident {
 			return v
@@ -117,7 +117,7 @@ func (self *Room) AckEnterRoom(player *Player){
 	self.SyncMsg(0, msgInfo)
 }
 
-func (self *Room) AckLeaveRoom(playerId int) {
+func (self *Room) AckLeaveRoom(playerId int32) {
 	var player = self.GetPlayer(playerId)
 	if player != nil {
 		self.RemovePlayer(playerId)
@@ -129,7 +129,7 @@ func (self *Room) AckLeaveRoom(playerId int) {
 	self.SyncMsg(playerId, msgInfo)
 }
 
-func (self *Room) AckBullet(playerId int, sPos *vector.Vector3, tPos *vector.Vector3, configId int) {
+func (self *Room) AckBullet(playerId int32, sPos *vector.Vector3, tPos *vector.Vector3, configId int) {
 	var player = self.GetPlayer(playerId)
 	if player != nil {
 		self.ReqBullet(player, sPos, tPos, configId)
@@ -154,7 +154,7 @@ func (self *Room) ReqBehitFish(p *Player, fish *Fish) {
 	self.SyncMsg(0, msgInfo)
 }
 
-func (self *Room) SyncMsg(ignoreIdent int, msg interface{}) {
+func (self *Room) SyncMsg(ignoreIdent int32, msg interface{}) {
 	for _, p := range self.playerList {
 		if ignoreIdent != p.Ident {
 			p.Agent.WriteMsg(msg)

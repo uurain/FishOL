@@ -6,7 +6,7 @@ import (
 	"server/model"
 )
 
-var playerMap = make(map[int]*Player)
+var playerMap = make(map[int32]*Player)
 
 func init() {
 	skeleton.RegisterChanRPC("NewAgent", rpcNewAgent)
@@ -21,7 +21,7 @@ func rpcNewAgent(args []interface{}) {
 
 func rpcNewPlayer(args []interface{}){
 	unit := args[0].(*model.Unit)
-	uid := args[1].(int)
+	uid := args[1].(int32)
 	agent := args[2].(gate.Agent)
 
 	var oldPlayer, ok = playerMap[uid]
@@ -40,8 +40,8 @@ func rpcNewPlayer(args []interface{}){
 func rpcCloseAgent(args []interface{}) {
 	a := args[0].(gate.Agent)
 	switch a.UserData().(type) {
-	case int:
-		var uid = a.UserData().(int)
+	case int32:
+		var uid = a.UserData().(int32)
 		log.Release("rpcCloseAgent uid:%v", uid)
 		RmovePlayer(uid)
 		room.AckLeaveRoom(uid)
@@ -49,14 +49,14 @@ func rpcCloseAgent(args []interface{}) {
 	}
 }
 
-func RmovePlayer(uid)  {
+func RmovePlayer(uid int32)  {
 	var _, ok = playerMap[uid]
 	if ok {
 		delete(playerMap, uid)
 	}
 }
 
-func GetPlayer(uid) * Player  {
+func GetPlayer(uid int32) * Player  {
 	var player, ok = playerMap[uid]
 	if ok {
 		return player
