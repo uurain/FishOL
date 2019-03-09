@@ -99,6 +99,10 @@ func (logger *Logger) doPrintf(level int, printLevel string, format string, a ..
 		panic("logger closed")
 	}
 
+	if logger.level == debugLevel {
+		fmt.Println(fmt.Sprintf(format, a...))
+	}
+
 	format = printLevel + format
 	logger.baseLogger.Output(3, fmt.Sprintf(format, a...))
 

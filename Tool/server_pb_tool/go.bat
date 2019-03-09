@@ -1,5 +1,5 @@
 protoc --go_out=. MsgDefine.proto
 
-copy .\\*.go  ..\\src\\leafserver\\src\\server\\msg\\ /Y
+copy .\\*.go  ..\\..\\server\\leafserver\\src\\server\\msg\\ /Y
 
 pause

@@ -8,6 +8,8 @@ import (
 
 func init() {
 	msg.Processor.SetRouter(&msg.ReqLogin{}, login.ChanRPC)
-	msg.Processor.SetRouter(&msg.ReqAckPlayerMove{}, game.ChanRPC)
-	msg.Processor.SetRouter(&msg.ReqAckStop{}, game.ChanRPC)
+	
+	msg.Processor.SetRouter(&msg.ReqAckEnterRoom{}, game.ChanRPC)
+	msg.Processor.SetRouter(&msg.ReqAckLeaveRoom{}, game.ChanRPC)
+	msg.Processor.SetRouter(&msg.ReqAckBullet{}, game.ChanRPC)
 }

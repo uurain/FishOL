@@ -20,7 +20,11 @@ var Server struct {
 }
 
 func init() {
-	data, err := ioutil.ReadFile("D:/unityProj/FishOL/FishOL/Server/leafserver/bin/conf/server.json")
+	//var str1 = "123132"
+	//data2 := []byte(str1)
+	//ioutil.WriteFile("./yujujun.txt", data2, 9044)
+
+	data, err := ioutil.ReadFile("./conf/server.json")
 	if err != nil {
 		log.Fatal("test%v", err)
 	}

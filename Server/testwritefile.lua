@@ -2,16 +2,15 @@ Msg = {
 	Id = {
 		ReqLogin = 0,
 		AckLogin = 1,
-		AckPlayerEntryList = 2,
-		AckPlayerLeaveList = 3,
-		AckPublicPropertyList = 4,
-		AckSwapScene = 5,
-		ReqAckStop = 6,
-		ReqAckPlayerMove = 7,
-		AckSkillFail = 8,
-		AckSkillStart = 9,
-		AckSkillResult = 10,
-		AckSkillStop = 11,
+		ReqAckEnterRoo = 2,
+		ReqAckLeaveRoo = 3,
+		AckPlayerEntryList = 4,
+		AckPlayerLeaveList = 5,
+		AckPublicPropertyList = 6,
+		ReqAckBullet = 7,
+		AckFishOpt = 8,
+		AckError = 9,
+		AckHitFish = 10,
 	},
 	Func = {
 		[0] = function (p)
@@ -25,52 +24,47 @@ Msg = {
 		    return msg
 		end,
 		[2] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckPlayerEntryList()
+		    local msg = Protol.MsgDefine_pb.ReqAckEnterRoo()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[3] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckPlayerLeaveList()
+		    local msg = Protol.MsgDefine_pb.ReqAckLeaveRoo()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[4] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckPublicPropertyList()
+		    local msg = Protol.MsgDefine_pb.AckPlayerEntryList()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[5] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckSwapScene()
+		    local msg = Protol.MsgDefine_pb.AckPlayerLeaveList()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[6] = function (p)
-		    local msg = Protol.MsgDefine_pb.ReqAckStop()
+		    local msg = Protol.MsgDefine_pb.AckPublicPropertyList()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[7] = function (p)
-		    local msg = Protol.MsgDefine_pb.ReqAckPlayerMove()
+		    local msg = Protol.MsgDefine_pb.ReqAckBullet()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[8] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckSkillFail()
+		    local msg = Protol.MsgDefine_pb.AckFishOpt()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[9] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckSkillStart()
+		    local msg = Protol.MsgDefine_pb.AckError()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[10] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckSkillResult()
-		    msg:ParseFromString(p)
-		    return msg
-		end,
-		[11] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckSkillStop()
+		    local msg = Protol.MsgDefine_pb.AckHitFish()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
