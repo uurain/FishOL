@@ -1,0 +1,2 @@
+*.cs linguist-language=unity
+*.go linguist-language=golang
