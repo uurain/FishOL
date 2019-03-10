@@ -3,6 +3,8 @@ package internal
 import (
 	//	"fmt"
 	"reflect"
+	"server/game"
+	"server/model"
 	"server/msg"
 
 	"github.com/name5566/leaf/util"
@@ -27,9 +29,16 @@ func handleLogin(args []interface{}) {
 	a := args[1].(gate.Agent)
 
 	uid := util.RandInterval(1000, 9999)
+	a.SetUserData(uid)
+
+	unit := &model.Unit{
+		Gold: 1000,
+		Name: m.GetAccountId(),
+	}
 	log.Release("handleLogin %d id:%d", m.GetAccountId(), uid)
 
-	a.SetUserData(uid)
+	game.ChanRPC.Go("NewPlayer", unit, uid, a)
+
 	a.WriteMsg(&msg.AckLogin{
 		ErrorCode: proto.Int32(0),
 		Uid:       proto.Int32(uid),

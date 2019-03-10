@@ -26,7 +26,13 @@ func handleEnterRoom(args []interface{}) {
 	uid := agent.UserData().(int32)
 	player := GetPlayer(uid)
 	if player != nil {
-		room.AckEnterRoom(player)
+		if room.IsFull() {
+			agent.WriteMsg(&msg.AckError{
+				ErrorCode: proto.Int32(int32( msg.EGameEventCode_Code_Full_Room)),
+			})
+		}else{
+			room.AckEnterRoom(player)
+		}
 	}
 }
 

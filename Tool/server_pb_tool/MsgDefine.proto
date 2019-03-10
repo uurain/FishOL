@@ -3,6 +3,7 @@ package msg;
 enum EGameEventCode
 {
 	Code_Not_Enough_Gold = 0;
+	Code_Full_Room = 1;
 }
 
 message Vector2

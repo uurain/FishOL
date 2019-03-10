@@ -7,7 +7,7 @@ import (
 type Fish struct {
 	ident    int32
 	configId int32
-	pathId   int
+	pathId   int32
 }
 
 func (self *Fish) Init() {

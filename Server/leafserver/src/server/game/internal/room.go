@@ -15,16 +15,19 @@ type Room struct {
 	playerList  [4]*Player
 	fishMap     map[int32]*Fish
 	createIndex int
+
+	fishBaseId  int32
 }
 
 func (self *Room) Init() {
+	self.fishBaseId = 0
 	self.createIndex = 0
 	self.fishMap = make(map[int32]*Fish)
 	go self.BeginTick()
 }
 
 func (self *Room) BeginTick() {
-	timeTick := time.NewTicker(1 * time.Second)
+	timeTick := time.NewTicker(5 * time.Second)
 	for {
 		select {
 		case <-timeTick.C:
@@ -34,11 +37,7 @@ func (self *Room) BeginTick() {
 }
 
 func (self *Room) Update() {
-	self.createIndex++
-	if self.createIndex >= 5 {
-		self.createIndex = 0
-		self.CreateFish()
-	}
+	self.CreateFish()
 }
 
 func (self *Room) AddPlayer(p *Player) {
@@ -68,18 +67,44 @@ func (self *Room) GetPlayer(ident int32) *Player {
 	return nil
 }
 
+func (self *Room) IsFull() bool {
+	for i := range self.playerList{
+		if self.playerList[i] == nil {
+			return false
+		}
+	}
+	return true
+}
+
 func (self *Room) CreateFish() {
-	fish := &Fish{}
+	self.fishBaseId ++
+	dbId := rand.Int31n(10)+1
+	pathDbId := rand.Int31n(10)+1
+	fish := &Fish{
+		ident: self.fishBaseId,
+		configId: dbId,
+		pathId: pathDbId,
+	}
 	fish.Init()
 	self.fishMap[fish.ident] = fish
 
 	msgInfo := &msg.AckFishOpt{
 		FishId: proto.Int32(fish.ident),
 		OptType:proto.Int32(0),
-		PathId: proto.Int32(0),
-		FishConfigId: proto.Int32(1001),
+		PathId: proto.Int32(fish.pathId),
+		FishConfigId: proto.Int32(fish.configId),
 	}
 	self.SyncMsg(0, msgInfo)
+
+	log.Release("create fish:%v", fish.configId)
+}
+
+func (self *Room) DeleteFish(fishId int32){
+	_, isExit := self.fishMap[fishId]
+	if isExit {
+		self.ReqDeleteFish(fishId)
+		delete(self.fishMap, fishId)
+	}
 }
 
 // 收到鱼被命中消息
@@ -87,7 +112,8 @@ func (self *Room) AckBehitFish(p *Player, ident int32) {
 	fish, isExit := self.fishMap[ident]
 	if isExit {
 		if rand.Uint32() > 50000 {
-			self.ReqBehitFish(p, fish)
+			self.ReqBehitFish(p, fish, 10)
+			p.Unit.Gold += 10
 			delete(self.fishMap, ident)
 		} else {
 			log.Release("%s未命中%d", p.Ident, ident)
@@ -95,6 +121,7 @@ func (self *Room) AckBehitFish(p *Player, ident int32) {
 	}
 }
 
+// 玩家进入房间
 func (self *Room) AckEnterRoom(player *Player){
 	self.AddPlayer(player)
 
@@ -117,6 +144,7 @@ func (self *Room) AckEnterRoom(player *Player){
 	self.SyncMsg(0, msgInfo)
 }
 
+// 玩家离开房间
 func (self *Room) AckLeaveRoom(playerId int32) {
 	var player = self.GetPlayer(playerId)
 	if player != nil {
@@ -129,6 +157,7 @@ func (self *Room) AckLeaveRoom(playerId int32) {
 	self.SyncMsg(playerId, msgInfo)
 }
 
+// 玩家发射子弹
 func (self *Room) AckBullet(playerId int32, sPos *vector.Vector3, tPos *vector.Vector3, configId int) {
 	var player = self.GetPlayer(playerId)
 	if player != nil {
@@ -146,17 +175,26 @@ func (self *Room) ReqBullet(p *Player, sPos *vector.Vector3, tPos *vector.Vector
 	self.SyncMsg(p.Ident, msgInfo)
 }
 
-func (self *Room) ReqBehitFish(p *Player, fish *Fish) {
-	msgInfo := &msg.AckFishOpt{
+func (self *Room) ReqBehitFish(p *Player, fish *Fish, addGold int32) {
+	msgInfo := &msg.AckHitFish{
+		Uid: proto.Int32(p.Ident),
 		FishId: proto.Int32(fish.ident),
-		OptType:proto.Int32(1),
+		RewardGold: proto.Int32(addGold),
+	}
+	self.SyncMsg(0, msgInfo)
+}
+
+func (self *Room) ReqDeleteFish(fishId int32){
+	msgInfo := &msg.AckFishOpt{
+		FishId:  proto.Int32(fishId),
+		OptType: proto.Int32(1),
 	}
 	self.SyncMsg(0, msgInfo)
 }
 
 func (self *Room) SyncMsg(ignoreIdent int32, msg interface{}) {
 	for _, p := range self.playerList {
-		if ignoreIdent != p.Ident {
+		if p != nil && ignoreIdent != p.Ident {
 			p.Agent.WriteMsg(msg)
 		}
 	}
