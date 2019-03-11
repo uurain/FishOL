@@ -6,23 +6,18 @@ function UILoading:ctor()
 	self.beginLoading = false
 end
 
-function UILoading:init()
-	self.super:init()
+function UILoading:Init()
+	self.super:Init()
 	self.slider = self.view:GetChild("pb")
 	self:SetPercent(0)
 	self.showBattle = false
 	self.UpdateHandle = handler(self, self.Update)
-
-	-- local bgGloader = self.view:GetChild("n2")
-	-- bgGloader.width = GRoot.inst.width
-	-- bgGloader.height = GRoot.inst.height
-	-- bgGloader.url = "UI/BigPic/bg1.jpg"
 end
 
-function UILoading:show()
-    self:SetPercent(0)
+function UILoading:Show()
+	self.super.Show(self)
 
-	self.super.show(self)
+    self:SetPercent(0)
 	self.showBattle = false
 	UpdateBeat:Add(self.UpdateHandle)
 end
@@ -41,20 +36,14 @@ function UILoading:BeginLoading()
 	self.beginLoading = true
 end
 
-function UILoading:hide()
-	self.super.hide(self)
+function UILoading:Hide()
+	self.super.Hide(self)
 	UpdateBeat:Remove(self.UpdateHandle)
 	self:SetPercent(0)
 end
 
 function UILoading:Update()
-	-- if self.loadingType == UILoadingType.battle then
-	-- 	self:SetPercent(battleResPool:GetLoadProcess())
-	-- elseif self.loadingType == UILoadingType.LuaLoad then
-	-- 	if self.beginLoading then
-	-- 		self:SetPercent(PreloadMgr.GetLoadProcess())
-	-- 	end
-	-- end
+
 end
 
 function UILoading:SetPercent( val)
@@ -72,9 +61,5 @@ function UILoading:SetPercent( val)
 	end
 end
 
-function UILoading:OnDestroy()
-	self.super:OnDestroy()
-	self.slider = nil
-end
 
 return UILoading

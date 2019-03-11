@@ -124,7 +124,7 @@ function UIManager.HidePanel(panelType, callback)
 	local panelCtrl = this.GetPanel(panelType.name)
 	if panelCtrl ~= nil then
 		if panelCtrl.panelState == UIPanelState.Loaded then
-			panelCtrl:hide()
+			panelCtrl:Hide()
 		end
 	end
 end
@@ -157,7 +157,7 @@ function UIManager.ShowPanel( panelType, callback)
 		if ui.panelState == UIPanelState.Loaded then
             --打开任意非TIP类型窗口，关闭引导
 
-			ui:show()
+			ui:Show()
 			if callback ~= nil then
 				callback(ui)
 			end
@@ -217,7 +217,7 @@ function UIManager._CreatePanel(panelType, callback)
 
 			panelCtrl:Awake(view)
 			panelCtrl.panelState = UIPanelState.Loaded
-			panelCtrl:hide()
+			panelCtrl:Hide()
 			if callback ~= nil then
 				callback(panelCtrl)
 			end

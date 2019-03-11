@@ -87,11 +87,11 @@ message AckError
 	required int32 error_code = 1;  // 1:发射失败没有金币
 }
 
-message AckHitFish
+message ReqAckHitFish
 {
 	required int32 uid = 1;
 	required int32 fish_id = 2;
-	required int32 reward_gold = 3;
+	optional int32 reward_gold = 3;
 }
 
 

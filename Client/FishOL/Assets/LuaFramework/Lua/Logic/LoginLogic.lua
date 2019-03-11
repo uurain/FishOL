@@ -34,7 +34,7 @@ end
 function LoginLogic:OnAckLogin(msg)
 	log("OnAckLogin:"..msg.errorCode..";"..msg.uid)
 	if msg.errorCode == 0 then
-		ConstMgr.uid = msg.uid
+		PlayerData.uid = msg.uid
 		self.loginState = _ELoginState.sucess		
 		self.super.DoEvent(self, "LOGINSUCESS")
 	else

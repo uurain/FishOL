@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" opaque="false">
+  <displayList>
+    <component id="n11_v187" name="firePanel" src="v187k" fileName="touchPad.xml" xy="0,0" size="1334,750"/>
+    <component id="n8_v187" name="GoldPanel" src="v187i" fileName="BtnGold.xml" xy="1196,0" size="137,48">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+    <component id="n9_v187" name="btnBack" src="v1873n" fileName="MyBtn2.xml" pkg="fp7beb56" xy="6,7">
+      <Button title="返回大厅" titleFontSize="22"/>
+    </component>
+    <component id="n10_v187" name="rewardPanel" src="v187j" fileName="Reward.xml" xy="542,201" visible="false">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <component id="n1_v187" name="Gun1" src="v187l" fileName="GunPanel.xml" xy="201,618">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n16_v187" name="Gun2" src="v187l" fileName="GunPanel.xml" xy="801,618" size="331,132">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </component>
+    <component id="n17_v187" name="Gun3" src="v187l" fileName="GunPanel.xml" xy="201,0" pivot="0.5,0.5" rotation="180">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+    <component id="n18_v187" name="Gun4" src="v187l" fileName="GunPanel.xml" xy="801,0" pivot="0.5,0.5" rotation="180">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+  </displayList>
+</component>

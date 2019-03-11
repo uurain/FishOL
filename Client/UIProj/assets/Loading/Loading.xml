@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <graph id="n0_or8y" name="n0" xy="0,0" size="1334,750" type="rect" fillColor="#adffffff">
+    <image id="n0_or8y" name="n0" src="v1871" fileName="changjing4.jpg" xy="0,0" size="1334,750">
       <relation target="" sidePair="width-width,height-height"/>
-    </graph>
-    <component id="n1_or8y" name="pb" src="or8y2u" pkg="fp7beb56" xy="276,614" size="780,14">
+    </image>
+    <component id="n1_or8y" name="pb" src="or8y2u" fileName="ProgressBar/ProgressBar.xml" pkg="fp7beb56" xy="276,614" size="780,14">
       <relation target="" sidePair="center-center,middle-middle"/>
       <ProgressBar value="82" max="100"/>
     </component>

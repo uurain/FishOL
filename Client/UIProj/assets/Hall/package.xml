@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="e46iun87" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="v1870" name="roombg.png" path="/Img/"/>
+    <image id="v1872" name="btnroom1.png" path="/Img/"/>
+    <image id="v1873" name="btnRoom2.png" path="/Img/"/>
+    <image id="v1874" name="btnRoom3.png" path="/Img/"/>
+    <component id="v1875" name="Hall.xml" path="/" exported="true"/>
+    <component id="v1877" name="btnRoom.xml" path="/Img/"/>
+  </resources>
+  <publish name="Hall" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Hall"/>
+</packageDescription>

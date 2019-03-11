@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fd963euj" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="or8y0" name="Battle.xml" path="/" exported="true"/>
+    <image id="v1871" name="Gun_1.png" path="/Img/" exported="true"/>
+    <image id="v1872" name="Gun_2.png" path="/Img/" exported="true"/>
+    <image id="v1873" name="Gun_3.png" path="/Img/" exported="true"/>
+    <image id="v1874" name="Gun_4.png" path="/Img/"/>
+    <image id="v1875" name="Gun_5.png" path="/Img/"/>
+    <image id="v1876" name="Gun_6.png" path="/Img/"/>
+    <image id="v1877" name="Gun_7.png" path="/Img/"/>
+    <image id="v1878" name="Gun_8.png" path="/Img/"/>
+    <image id="v1879" name="Gun_9.png" path="/Img/"/>
+    <image id="v187a" name="Gun_10.png" path="/Img/"/>
+    <image id="v187b" name="paotaibg.png" path="/Img/"/>
+    <image id="v187c" name="reward2.png" path="/Img/"/>
+    <image id="v187d" name="reward1.png" path="/Img/"/>
+    <image id="v187e" name="goldBg.png" path="/Img/"/>
+    <image id="v187f" name="leftArr.png" path="/Img/"/>
+    <component id="v187h" name="btnArrow.xml" path="/"/>
+    <component id="v187i" name="BtnGold.xml" path="/"/>
+    <component id="v187j" name="Reward.xml" path="/"/>
+    <component id="v187k" name="touchPad.xml" path="/"/>
+    <component id="v187l" name="GunPanel.xml" path="/"/>
+  </resources>
+  <publish name="Battle" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Room"/>
+</packageDescription>

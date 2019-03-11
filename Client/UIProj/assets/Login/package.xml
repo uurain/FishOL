@@ -2,6 +2,11 @@
 <packageDescription id="frg4tunr" jpegQuality="80" compressPNG="true">
   <resources>
     <component id="or8y0" name="Login.xml" path="/" exported="true"/>
+    <image id="v1871" name="changjing2.jpg" path="/"/>
+    <image id="v1872" name="btnBegin.png" path="/"/>
+    <component id="v1873" name="btnLogin.xml" path="/"/>
+    <image id="v1874" name="inputbg1.png" path="/"/>
+    <component id="v1875" name="TextInput.xml" path="/"/>
   </resources>
   <publish name="Login" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Login"/>
 </packageDescription>

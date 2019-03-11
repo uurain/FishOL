@@ -9,6 +9,10 @@ local _LogicTable = {}
 LogicType = {
 	GameMgr = "GameMgr",
 	SceneMgr = "SceneMgr",
+	Hall = "HallLogic",
+	Room = "RoomLogic",
+	PropertySync = "PropertySyncLogic",
+	SceneMove = "SceneMoveLogic",
 }
 
 

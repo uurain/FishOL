@@ -38,6 +38,7 @@ UIType = {
 UIPanelType = {
 	Login = { name = "Login", uType = UIType.base, fullScreen = true, pkgName = "Login"},
 	Loading = { name = "Loading", uType = UIType.base, fullScreen = true, pkgName = "Loading"},
-	Battle = { name = "Battle", uType = UIType.base, fullScreen = true, pkgName = "Battle"},
+	Room = { name = "Room", uType = UIType.base, fullScreen = true, pkgName = "Room"},
+	Hall = { name = "Hall", uType = UIType.base, fullScreen = true, pkgName = "Hall"},
 	CheckBox = { name = "CheckBox", uType = UIType.window, anchor = UIPanelAnchor.center, pkgName = "Common"},
 }

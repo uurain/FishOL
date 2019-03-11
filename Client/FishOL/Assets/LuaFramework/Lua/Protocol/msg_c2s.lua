@@ -5,34 +5,32 @@ function Msg_ReqLogin(account)
     Network.SendMessage(Msg.Id.ReqLogin, reqBuff)
 end
 
-function Msg_ReqMove(ident, targetTable)
- 	local req = Protol.MsgDefine_pb.ReqAckPlayerMove()
- 	req.mover = ident
- 	for i,v in ipairs(targetTable) do
- 		local posTable = Protol.MsgDefine_pb.Vector3()
- 		posTable.x = v.x
- 		posTable.y = v.y
- 		posTable.z = v.z
- 		table.insert(req.target_pos, posTable)
- 	end
+function Msg_ReqEnterRoom()
+ 	local req = Protol.MsgDefine_pb.ReqAckEnterRoom()
  	local reqBuff = req:SerializeToString()
-    Network.SendMessage(Msg.Id.ReqAckPlayerMove, reqBuff)
+    Network.SendMessage(Msg.Id.ReqAckEnterRoom, reqBuff)
 end
 
-function Msg_ReqStop(ident, tPos)
- 	local req = Protol.MsgDefine_pb.ReqAckStop()
- 	req.mover = ident
- 	req.source_pos.x = tPos.x
- 	req.source_pos.y = tPos.y
- 	req.source_pos.z = tPos.z
+function Msg_ReqLeaveRoom()
+ 	local req = Protol.MsgDefine_pb.ReqAckLeaveRoom()
  	local reqBuff = req:SerializeToString()
-    Network.SendMessage(Msg.Id.ReqAckStop, reqBuff)
+    Network.SendMessage(Msg.Id.ReqAckLeaveRoom, reqBuff)
 end
 
-function Msg_ReqUseSkill(skillId)
- 	local req = Protol.MsgDefine_pb.ReqUseSkill()
- 	req.skill_id = skillId
+function Msg_ReqBullet(uid, bulletType, sPos, tPos)
+ 	local req = Protol.MsgDefine_pb.ReqAckBullet()
+ 	req.uid = uid
+ 	req.bullet_type = bulletType
+ 	req.tpos = tpos
+ 	req.sPos = sPos
  	local reqBuff = req:SerializeToString()
-    Network.SendMessage(Msg.Id.ReqUseSkill, reqBuff)
+    Network.SendMessage(Msg.Id.ReqAckBullet, reqBuff)
 end
 
+function Msg_ReqHitFish(uid, fishId)
+ 	local req = Protol.MsgDefine_pb.ReqAckHitFish()
+ 	req.uid = uid
+ 	req.fish_id = fishId
+ 	local reqBuff = req:SerializeToString()
+    Network.SendMessage(Msg.Id.ReqAckHitFish, reqBuff)
+end

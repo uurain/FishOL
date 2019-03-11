@@ -129,6 +129,10 @@
     <component id="ey0u3h" name="CheckBox.xml" path="/" exported="true"/>
     <component id="czqr3i" name="FullScreenBtn.xml" path="/" exported="true"/>
     <component id="czqr3j" name="HeadBar.xml" path="/" exported="true"/>
+    <image id="v1873k" name="btn1.png" path="/"/>
+    <image id="v1873l" name="btn2.png" path="/"/>
+    <component id="v1873m" name="MyBtn1.xml" path="/" exported="true"/>
+    <component id="v1873n" name="MyBtn2.xml" path="/" exported="true"/>
   </resources>
   <publish name="Common" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Common"/>
 </packageDescription>

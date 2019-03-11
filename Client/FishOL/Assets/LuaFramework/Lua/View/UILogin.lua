@@ -13,18 +13,12 @@ function UILogin:ctor()
 end
 
 --初始化面板--
-function UILogin:init()
+function UILogin:Init()
 	log("UILogin:init")
-	self.super.init(self)
+	self.super.Init(self)
 
 	self.btnLogin = self.view:GetChild("btnLogin")
-	self.btnLogin.onClick:Add(self.onClickLogin, self)
-
-
-	-- local bgGloader = self.view:GetChild("n31")
-	-- bgGloader.width = GRoot.inst.width
-	-- bgGloader.height = GRoot.inst.height
-	-- bgGloader.url = "UI/BigPic/bg2.jpg"
+	self.btnLogin.onClick:Add(self.OnClickLogin, self)
 
 
 	self.tfUsername = self.view:GetChild("inputUsername")
@@ -36,24 +30,14 @@ function UILogin:init()
 	
 	self.loginLogic = LogicManager.Get(UIPanelType.Login.name)
 	self.loginLogic:RegisterCallback("LOGINSUCESS", handler(self.hide, self))
-	-- LogicManager.Get(UIPanelType.CreateRole.name):RegisterCallback("ROLELIST", self.roleListHandle)
 end
 
---单击事件--
-function UILogin:OnDestroy()
-	logWarn("OnDestroy---->>>");
-	self.super.OnDestroy(self)
-end
 
-function UILogin:onClickLogin()
+function UILogin:OnClickLogin()
 	log("onClickLogin")
 	self:hide()
 	-- LogicManager.Get(LogicType.GameMgr):LocalTest()
 	self.loginLogic:ReqLogin(self.tfUsername.text)
-end
-
-function UILogin:onClickUpdate()
-	log("UILogin:onClickUpdate")	
 end
 
 function UILogin:GetUserName()

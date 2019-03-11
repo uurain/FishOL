@@ -14,6 +14,7 @@ require "Manager/TimeMgr"
 require "Manager/DisplayObjectMgr"
 require "Manager/PreloadMgr"
 require "Manager/ConstMgr"
+require "Manager/PlayerData"
 
 require "Common/functions"
 require "Common/FairyGUI"

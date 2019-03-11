@@ -17,11 +17,16 @@ function BasePanel:Awake(obj)
 	-- self.gameObject = obj
 	-- self.transform = obj.transform
 	self.view = obj
-	self:init()
+	self:Init()
 	-- logWarn("Awake lua--->>"..self.panelType.name)
 end
 
-function BasePanel:show(...)
+function BasePanel:Init()
+
+end
+
+
+function BasePanel:Show(...)
 	if self.view ~= nil then
 		if self.panelType and self.panelType.uType == UIType.window then
 			UIManager.ShowWindow(self.view)
@@ -38,7 +43,7 @@ function BasePanel:show(...)
 	self:ShowBlur()
 end
 
-function BasePanel:hide()
+function BasePanel:Hide()
 	if self.view ~= nil then
 		if self.panelType and self.panelType.uType == UIType.window then
 			UIManager.HideWindow(self.view)
@@ -96,12 +101,8 @@ function BasePanel:EmptyOnClick()
 
 end
 
-function BasePanel:init()
-
-end
-
 function BasePanel:OnDestroy()
-	self:hide()
+	self:Hide()
 	if self.view ~= nil then
 		self.view:Dispose()
 		self.view = nil

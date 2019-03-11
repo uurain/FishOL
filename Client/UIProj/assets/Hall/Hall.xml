@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n0_v187" name="n0" src="v1870" fileName="Img/roombg.png" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_v187" name="btnRoom1" src="v1877" fileName="Img/btnRoom.xml" xy="260,215" group="n6_v187">
+      <Button icon="ui://e46iun87v1872"/>
+    </component>
+    <component id="n4_v187" name="btnRoom2" src="v1877" fileName="Img/btnRoom.xml" xy="567,215" group="n6_v187">
+      <Button icon="ui://e46iun87v1873"/>
+    </component>
+    <component id="n5_v187" name="btnRoom3" src="v1877" fileName="Img/btnRoom.xml" xy="874,215" group="n6_v187">
+      <Button icon="ui://e46iun87v1874"/>
+    </component>
+    <group id="n6_v187" name="n6" xy="260,215" size="814,200" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
