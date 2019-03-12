@@ -43,6 +43,7 @@ function UIRoom:Init()
 			self:ChangeGun(i, false)
 		end)
 	end
+	self.mineGun = nil
 
 	self.curGunIndex = 1	
 	self.roomLogic = LogicManager.Get(LogicType.Room)
@@ -59,6 +60,7 @@ function UIRoom:Show()
 end
 
 function UIRoom:Hide()
+	self.mineGun = nil
 	if self.updatePlayerHandler ~= nil then
 		self.roomLogic:RemoveCallBackById("Action_Room_PlayerEnterLeave")
 		self.updatePlayerHandler = nil
@@ -73,7 +75,18 @@ function UIRoom:OnClickBack()
 end
 
 function UIRoom:OnClickFire()
-	log("Stage.inst.touchPosition:"..Stage.inst.touchPosition.x..";"..Stage.inst.touchPosition.y)
+	if self.mineGun ~= nil then
+		local gunIconPos = self.mineGun.gunIcon:LocalToGlobal(Vector2.zero)
+		local touchPos = Stage.inst.touchPosition
+		touchPos:Sub(gunIconPos)
+		local angle = Vector2.Angle(touchPos, Vector2.New(1, 0))
+		log(angle)
+		self.mineGun.gunIcon.rotation = 90 - angle
+
+        -- local screenPos = self.btnOk:LocalToGlobal(Vector2.New(self.btnOk.width/2, self.btnOk.height/2))
+        -- local screen3pos = Vector3.New(screenPos.x, screenPos.y, modeScale/1000 - gameSceneMgr.ui3dCam.transform.localPosition.z)
+        -- local ui3dCamPos = gameSceneMgr.ui3dCam:ScreenToWorldPoint(screen3pos)
+	end
 end
 
 function UIRoom:ChangeGun(index, isLeft)
@@ -102,6 +115,7 @@ function UIRoom:UpdatePlayer(index, playerInfo)
 	else
 		gunItem.ctState.selectedIndex = 0
 		if playerInfo:IsMine() then
+			self.mineGun = gunItem
 			gunItem.ctArr.selectedIndex = 0
 		end
 		gunItem.item.title = playerInfo.player_info.name

@@ -3,5 +3,6 @@
 
 preLoadData = 
 {
-	"Table/RandName",
+	"Table/bullet",
+	"Table/fish",
 }
