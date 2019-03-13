@@ -3,12 +3,14 @@ local RoomLogic = class(require("Logic.BaseLogic"))
 function RoomLogic:Init()
 	self.playerTable = {}
 
-	Event.AddListener(Msg.Id.AckPlayerEntryList, handler(self, self.OnPlayerEntryList))
-	Event.AddListener(Msg.Id.AckPlayerLeaveList, handler(self, self.OnPlayerLeaveList))
-	Event.AddListener(Msg.Id.ReqAckBullet, handler(self, self.OnBullet))
-	Event.AddListener(Msg.Id.ReqAckLeaveRoom, handler(self, self.OnLeaveRoom))
-	Event.AddListener(Msg.Id.AckFishOpt, handler(self, self.OnFishOpt))
-	Event.AddListener(Msg.Id.ReqAckHitFish, handler(self, self.OnHitFish))
+	Event.AddListener(Msg.Id.AckPlayerEntryList, handler(self.OnPlayerEntryList, self))
+	Event.AddListener(Msg.Id.AckPlayerLeaveList, handler(self.OnPlayerLeaveList, self))
+	Event.AddListener(Msg.Id.ReqAckBullet, handler(self.OnBullet, self))
+	Event.AddListener(Msg.Id.ReqAckLeaveRoom, handler(self.OnLeaveRoom, self))
+	Event.AddListener(Msg.Id.AckFishOpt, handler(self.OnFishOpt, self))
+	Event.AddListener(Msg.Id.ReqAckHitFish, handler(self.OnHitFish, self))
+
+	self.sceneMoveLogic = LogicManager.Get(LogicType.SceneMove)
 end
 
 function RoomLogic:OnBullet(msg)
@@ -20,15 +22,20 @@ function RoomLogic:OnLeaveRoom(msg)
 end
 
 function RoomLogic:OnFishOpt(msg)
-
+	if msg.opt_type == 0 then
+		self.sceneMoveLogic:CreateFish(msg.fish_id, msg.fishConfigId, msg.path_id)
+	elseif msg.opt_type == 1 then
+		self.sceneMoveLogic:RemoveFish(msg.fish_id)
+	end
 end
 
-function BoomLogic:OnHitFish(msg)
+function RoomLogic:OnHitFish(msg)
 	self.super.DoEvent(self, "Action_Room_HitFish", msg)
 end
 
 function RoomLogic:OnPlayerEntryList(msg)
 	for i,v in ipairs(msg.object_list) do
+		log("OnPlayerEntryList1")
 		self:PlayerEnter(v)
 	end
 end
@@ -50,22 +57,28 @@ function RoomLogic:PlayerLeave(uid)
 end
 
 function RoomLogic:PlayerEnter(playerInfo)
+	log("PlayerEnter1")
 	local player = require("Logic/PlayerLogic").new()
+	log("PlayerEnter2")
 	player:Init(playerInfo)
+	log("PlayerEnter3")
 	self.playerTable[playerInfo.table_index] = player
+	log("PlayerEnter4")	
 
 	if playerInfo.uid == PlayerData.uid then
+		log("PlayerEnter5")
 		PlayerData.gold = playerInfo.player_info.gold
 	end
 
-	self.super.DoEvent(self, "Action_Room_PlayerEnterLeave", player.table_index, playerInfo)
+	log("PlayerEnter6")
+	self.super.DoEvent(self, "Action_Room_PlayerEnterLeave", playerInfo.table_index, player)
 end
 
-function BoomLogic:ReqFire(bulletType, sPos, tPos)
+function RoomLogic:ReqFire(bulletType, sPos, tPos)
 	Msg_ReqBullet(PlayerData.uid, bulletType, sPos, tPos)
 end
 
-function BoomLogic:ReqLeaveRoom()
+function RoomLogic:ReqLeaveRoom()
 	Msg_ReqLeaveRoom()
 end
 

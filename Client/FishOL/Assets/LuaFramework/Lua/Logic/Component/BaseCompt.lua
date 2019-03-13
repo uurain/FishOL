@@ -11,7 +11,7 @@ function BaseCompt:Init()
     GameObject.DontDestroyOnLoad(self.rootWorldObj)
 end
 
-function FishCompt:SetVisible(val)
+function BaseCompt:SetVisible(val)
 	if self.rootWorldObj ~= nil then
     	self.rootWorldObj:SetActive(val)
 	end

@@ -12,7 +12,8 @@ function DbMgr.GetFishDb(id)
 			return v
 		end
 	end
-	return nil
+	return fish[1]
+	-- return nil
 end
 
 function DbMgr.GetBulletDb(id)
@@ -21,5 +22,6 @@ function DbMgr.GetBulletDb(id)
 			return v
 		end
 	end
-	return nil
+	return bullet[1]
+	-- return nil
 end

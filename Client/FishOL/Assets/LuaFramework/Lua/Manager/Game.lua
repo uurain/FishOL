@@ -6,6 +6,10 @@ require "event"
 require "Table/Language"
 require "Table/DataTable"
 
+require "Common/functions"
+require "Common/FairyGUI"
+require "Common/bit"
+
 require "Manager/UIManager"
 require "Manager/LogicManager"
 require "Manager/IconManager"
@@ -17,9 +21,7 @@ require "Manager/ConstMgr"
 require "Manager/PlayerData"
 require "Manager/DbMgr"
 
-require "Common/functions"
-require "Common/FairyGUI"
-require "Common/bit"
+
 
 -- require "Logic/PgEventDispatch"
 
@@ -46,22 +48,9 @@ end
 
 --初始化完成，发送链接服务器信息--
 function Game.OnInitOK()
-    AppConst.SocketPort = 2012;
-    AppConst.SocketAddress = "127.0.0.1";
-    -- networkMgr:SendConnect();
-
-    -- --注册LuaView--
-
     this.PreLoadFile()
 
-    -- this.test_class_func();
-    -- this.test_pblua_func();
-    -- this.test_cjson_func();
-    -- this.test_pbc_func();
-    -- this.test_lpeg_func();
-    -- this.test_sproto_func();
-    -- coroutine.start(this.test_coroutine);
-    -- staticMgr:InitData();
+
     UIManager.Init();
     LogicManager.Init();
     IconManager.Init();

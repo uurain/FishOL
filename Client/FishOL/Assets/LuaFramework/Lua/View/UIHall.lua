@@ -8,7 +8,7 @@ function UIHall:Init()
 		self.view:GetChild("btnRoom"..i).onClick:Add(self.OnClickEnterGame, self)
 	end
 
-	self.hallLogic = LogicManager.Get(UIPanelType.Login.name)
+	self.hallLogic = LogicManager.Get(LogicType.Hall)
 	self.hallLogic:RegisterCallback("Action_Hall_EnterRoom", handler(self.OnEnterRoom, self))
 end
 

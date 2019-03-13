@@ -31,6 +31,7 @@ func handleEnterRoom(args []interface{}) {
 				ErrorCode: proto.Int32(int32( msg.EGameEventCode_Code_Full_Room)),
 			})
 		}else{
+			agent.WriteMsg(&msg.ReqAckEnterRoom{})
 			room.AckEnterRoom(player)
 		}
 	}

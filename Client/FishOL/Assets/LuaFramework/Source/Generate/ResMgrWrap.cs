@@ -29,11 +29,10 @@ public class ResMgrWrap
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 3);
+			ToLua.CheckArgsCount(L, 2);
 			ResMgr obj = (ResMgr)ToLua.CheckObject<ResMgr>(L, 1);
-			string arg0 = ToLua.CheckString(L, 2);
-			System.Action arg1 = (System.Action)ToLua.CheckDelegate<System.Action>(L, 3);
-			obj.Initialize(arg0, arg1);
+			System.Action arg0 = (System.Action)ToLua.CheckDelegate<System.Action>(L, 2);
+			obj.Initialize(arg0);
 			return 0;
 		}
 		catch (Exception e)

@@ -22,11 +22,12 @@ func init() {
 	Processor.Register(&ReqAckBullet{})
 	Processor.Register(&AckFishOpt{})
 	Processor.Register(&AckError{})
-	Processor.Register(&AckHitFish{})
+	Processor.Register(&ReqAckHitFish{})
 
 	createLuaMsgConfig()
 }
 
+// 用于生成lua的协议id以及解析包文件
 func createLuaMsgConfig() {
 	var content string = "Msg = {\n"
 	var idContent = "	Id = {\n"
@@ -34,7 +35,8 @@ func createLuaMsgConfig() {
 	Processor.Range(func(id uint16, t reflect.Type) {
 
 		idStr := fmt.Sprint(id)
-		msgStr := strings.Trim(t.String(), "*msg.")
+		msgStr := strings.Replace(t.String(), "*msg.", "", -1)
+		//fmt.Println(t.String() + ":" + strings.Replace(t.String(), "*msg.", "", -1))
 		idContent += "		" + msgStr + " = " + idStr + ",\n"
 
 		funcContent += "		[" + idStr + "] = function (p)\n"
@@ -48,7 +50,7 @@ func createLuaMsgConfig() {
 	funcContent += "	},\n"
 	content += idContent + funcContent + "}"
 
-	f, err := os.Create("testwritefile.lua")
+	f, err := os.Create("msg_define.lua")
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {

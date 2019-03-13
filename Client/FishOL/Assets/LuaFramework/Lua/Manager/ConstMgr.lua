@@ -2,7 +2,7 @@ ConstMgr = {}
 
 ConstMgr.uid = 0
 ConstMgr.serverIp = "127.0.0.1"
-ConstMgr.serverPort = 3563
+ConstMgr.serverPort = 7000
 
 ComponentType = {
 	transform = 1,		-- 移动组件

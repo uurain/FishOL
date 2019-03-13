@@ -2,15 +2,15 @@ Msg = {
 	Id = {
 		ReqLogin = 0,
 		AckLogin = 1,
-		ReqAckEnterRoo = 2,
-		ReqAckLeaveRoo = 3,
+		ReqAckEnterRoom = 2,
+		ReqAckLeaveRoom = 3,
 		AckPlayerEntryList = 4,
 		AckPlayerLeaveList = 5,
 		AckPublicPropertyList = 6,
 		ReqAckBullet = 7,
 		AckFishOpt = 8,
 		AckError = 9,
-		AckHitFish = 10,
+		ReqAckHitFish = 10,
 	},
 	Func = {
 		[0] = function (p)
@@ -24,12 +24,12 @@ Msg = {
 		    return msg
 		end,
 		[2] = function (p)
-		    local msg = Protol.MsgDefine_pb.ReqAckEnterRoo()
+		    local msg = Protol.MsgDefine_pb.ReqAckEnterRoom()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
 		[3] = function (p)
-		    local msg = Protol.MsgDefine_pb.ReqAckLeaveRoo()
+		    local msg = Protol.MsgDefine_pb.ReqAckLeaveRoom()
 		    msg:ParseFromString(p)
 		    return msg
 		end,
@@ -64,7 +64,7 @@ Msg = {
 		    return msg
 		end,
 		[10] = function (p)
-		    local msg = Protol.MsgDefine_pb.AckHitFish()
+		    local msg = Protol.MsgDefine_pb.ReqAckHitFish()
 		    msg:ParseFromString(p)
 		    return msg
 		end,

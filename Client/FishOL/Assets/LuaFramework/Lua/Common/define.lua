@@ -64,6 +64,8 @@ GameObject = UnityEngine.GameObject;
 Physics	= UnityEngine.Physics
 Application = UnityEngine.Application
 
+MainCam = UnityEngine.Camera.main
+
 function Res_LoadGameObject(path, cb)
 	G_ResMgr:LoadGameObject(path, cb)
 end

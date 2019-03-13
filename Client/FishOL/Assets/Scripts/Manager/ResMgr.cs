@@ -139,7 +139,7 @@ public class ResMgr : MonoBehaviour
 
     Transform _cachedParent = null;
 
-    public void Initialize(string manifestName, Action initOK)
+    public void Initialize(Action initOK)
     {
         GameObject cachedGo = new GameObject("CachedParent");
         cachedGo.SetActive(false);

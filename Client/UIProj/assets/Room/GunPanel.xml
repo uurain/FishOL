@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="331,132" extention="Label">
-  <controller name="ctState" pages="0,有人,1,无人" selected="0"/>
-  <controller name="ctArr" pages="0,,1," selected="0"/>
+  <controller name="ctState" pages="0,有人,1,无人" selected="1"/>
+  <controller name="ctArr" pages="0,,1," selected="1"/>
   <displayList>
     <image id="n1_v187" name="n1" src="v187b" fileName="Img/paotaibg.png" xy="0,48"/>
     <component id="n3_v187" name="btnLeftGun" src="v187h" fileName="btnArrow.xml" xy="34,70" size="43,62" aspect="true">
@@ -10,10 +10,10 @@
     <component id="n4_v187" name="btnRightGun" src="v187h" fileName="btnArrow.xml" xy="263,69" size="43,62" aspect="true" scale="-1,1">
       <gearDisplay controller="ctArr" pages="0"/>
     </component>
-    <loader id="n5_v187" name="gunIcon" xy="126,0" pivot="0.5,1" size="76,105" url="ui://fd963eujv1871" autoSize="true">
+    <loader id="n5_v187" name="gunIcon" xy="126,0" pivot="0.5,0.88" size="76,105" url="ui://fd963eujv1871" autoSize="true">
       <gearIcon controller="ctState" default="ui://fd963eujv1871"/>
     </loader>
-    <text id="n7_v187" name="title" xy="160,99" pivot="0.5,0.5" size="10,39" fontSize="30" color="#ffff00" align="center" vAlign="middle" strokeColor="#000000" text="">
+    <text id="n7_v187" name="title" xy="132,99" pivot="0.5,0.5" size="65,39" fontSize="30" color="#ffff00" align="center" vAlign="middle" strokeColor="#000000" text="无人">
       <gearText controller="ctState" pages="0" values="" default="无人"/>
     </text>
   </displayList>

@@ -29,15 +29,21 @@ function UILogin:Init()
 	end
 	
 	self.loginLogic = LogicManager.Get(UIPanelType.Login.name)
-	self.loginLogic:RegisterCallback("LOGINSUCESS", handler(self.hide, self))
+	self.loginLogic:RegisterCallback("LOGINSUCESS", handler(self.OnLoginSucess, self))
 end
 
 
 function UILogin:OnClickLogin()
 	log("onClickLogin")
-	self:hide()
+	-- self:Hide()
 	-- LogicManager.Get(LogicType.GameMgr):LocalTest()
 	self.loginLogic:ReqLogin(self.tfUsername.text)
+end
+
+function UILogin:OnLoginSucess()
+	UIManager.ShowPanel(UIPanelType.Hall, function ()
+		self:Hide()
+	end)
 end
 
 function UILogin:GetUserName()

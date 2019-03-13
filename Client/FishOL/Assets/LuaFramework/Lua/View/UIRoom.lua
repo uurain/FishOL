@@ -9,13 +9,6 @@ function UIRoom:Init()
 	self.rewardPanel = self.view:GetChild("rewardPanel")
 	self.rewardPanel.visible = false
 
-	self.view:GetChild("btnLeftGun").onClick:Add(function ()
-		self:ChangeGun(true)
-	end)
-	self.view:GetChild("btnRightGun").onClick:Add(function ()
-		self:ChangeGun(false)
-	end)
-
 	self.gunIcon = self.view:GetChild("gunIcon")
 	self.firePanel = self.view:GetChild("firePanel")
 	self.firePanel.onClick:Add(self.OnClickFire, self)
@@ -30,6 +23,9 @@ function UIRoom:Init()
 		self.gunTable[i].gunIcon = item:GetChild("gunIcon")
 		self.gunTable[i].ctState = item:GetController("ctState")
 		self.gunTable[i].ctArr = item:GetController("ctArr")
+
+		self.gunTable[i].ctState.selectedIndex = 1
+		self.gunTable[i].ctArr.selectedIndex = 1
 
 		if i > 2 then
 			local arr = item:GetChild("title")
@@ -53,6 +49,7 @@ function UIRoom:Show()
 
 	if self.updatePlayerHandler == nil then
 		self.updatePlayerHandler = handler(self.UpdatePlayer, self)
+		logError("RegisterCallback 1")
 		self.roomLogic:RegisterCallback("Action_Room_PlayerEnterLeave", self.updatePlayerHandler)
 	end
 
@@ -62,6 +59,7 @@ end
 function UIRoom:Hide()
 	self.mineGun = nil
 	if self.updatePlayerHandler ~= nil then
+		logError("RegisterCallback 2")
 		self.roomLogic:RemoveCallBackById("Action_Room_PlayerEnterLeave")
 		self.updatePlayerHandler = nil
 	end
@@ -75,7 +73,9 @@ function UIRoom:OnClickBack()
 end
 
 function UIRoom:OnClickFire()
+	log("OnClickFire1")
 	if self.mineGun ~= nil then
+		log("OnClickFire2")
 		local gunIconPos = self.mineGun.gunIcon:LocalToGlobal(Vector2.zero)
 		local touchPos = Stage.inst.touchPosition
 		touchPos:Sub(gunIconPos)
@@ -103,22 +103,23 @@ function UIRoom:ChangeGun(index, isLeft)
 		self.curGunIndex = 3
 	end
 	local gunIcon = self.gunTable[index].gunIcon
-	gunIcon.url = UIPackage.GetItemAsset("Battle", "Gun_"..self.curGunIndex)
+	gunIcon.url = UIPackage.GetItemURL("Room", "Gun_"..self.curGunIndex)
 end
 
-function UIRoom:UpdatePlayer(index, playerInfo)
-	local gunItem = self.gunTable[index]
+function UIRoom:UpdatePlayer(index, player)
+
+	local gunItem = self.gunTable[index+1]
 
 	gunItem.ctArr.selectedIndex = 1
-	if playerInfo == nil then
+	if player == nil then
 		gunItem.ctState.selectedIndex = 1		
 	else
-		gunItem.ctState.selectedIndex = 0
-		if playerInfo:IsMine() then
+		gunItem.ctState.selectedIndex = 1
+		if player:IsMine() then
 			self.mineGun = gunItem
 			gunItem.ctArr.selectedIndex = 0
 		end
-		gunItem.item.title = playerInfo.player_info.name
+		gunItem.item.title = player:GetName()
 	end
 end
 

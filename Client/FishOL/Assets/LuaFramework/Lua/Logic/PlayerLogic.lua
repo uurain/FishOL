@@ -1,6 +1,6 @@
 local PlayerLogic = class("PlayerLogic")
 
-function PlayerLogic:Init(dataInfo)
+function PlayerLogic:Init(data)
 	self.info = data
 end
 

@@ -200,6 +200,7 @@ public static class CustomSettings
         _GT(typeof(SaveDataMgr)),
         _GT(typeof(NetworkMgr)),
         _GT(typeof(Util)),
+        _GT(typeof(AssetObject)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

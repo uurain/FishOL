@@ -88,7 +88,8 @@ public class GameMgr : MonoBehaviour
     /// </summary>
     void Init() {
         InitUIConfig();
-        OnInitialize();
+
+        resMgr.Initialize(OnInitialize);
     }
 
     void InitUIConfig()

@@ -7,12 +7,11 @@ local this = LogicManager
 local _LogicTable = {}
 
 LogicType = {
-	GameMgr = "GameMgr",
-	SceneMgr = "SceneMgr",
-	Hall = "HallLogic",
-	Room = "RoomLogic",
-	PropertySync = "PropertySyncLogic",
-	SceneMove = "SceneMoveLogic",
+	SceneMove = "SceneMove",
+
+	Hall = "Hall",
+	Room = "Room",
+	PropertySync = "PropertySync",	
 }
 
 
@@ -41,7 +40,6 @@ end
 function LogicManager.Create(logicName)
 	local logic = require("Logic."..logicName.."Logic").new()
 	logic:Init()
-	logic:Reset()
 	this.Add(logicName, logic)
 	return logic
 end

@@ -1,12 +1,13 @@
 local FishCompt = class(require("Logic.Component.BaseCompt"))
 
 function FishCompt:ctor()
+	log("FishCompt:ctor")
 	self.assetNode = nil
 end
 
 function FishCompt:Init(fishDb)
 	self.super.Init(self)
-
+	
     self.assetNode = require("Logic.Component.GameObjectNode").new(fishDb.path)
     self.assetNode:Load(function (assetObj )
         assetObj.CachedTransform:SetParent(self.rootWorldObj.transform)

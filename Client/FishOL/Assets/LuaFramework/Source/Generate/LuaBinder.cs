@@ -17,6 +17,7 @@ public static class LuaBinder
 		SaveDataMgrWrap.Register(L);
 		NetworkMgrWrap.Register(L);
 		UtilWrap.Register(L);
+		AssetObjectWrap.Register(L);
 		L.BeginModule("LuaInterface");
 		LuaInterface_LuaInjectionStationWrap.Register(L);
 		LuaInterface_InjectTypeWrap.Register(L);
@@ -139,6 +140,9 @@ public static class LuaBinder
 		L.RegFunction("GComponentCreator", FairyGUI_UIObjectFactory_GComponentCreator);
 		L.RegFunction("GLoaderCreator", FairyGUI_UIObjectFactory_GLoaderCreator);
 		L.EndModule();
+		L.EndModule();
+		L.BeginModule("Utils");
+		Utils_CachedMonoBehaviourWrap.Register(L);
 		L.EndModule();
 		L.BeginModule("System");
 		L.RegFunction("Action", System_Action);

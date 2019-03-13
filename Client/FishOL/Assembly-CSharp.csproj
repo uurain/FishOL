@@ -226,6 +226,7 @@
     <Compile Include="Assets\FairyGUI\Scripts\Utils\XMLUtils.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Utils\ZipReader.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\AppConstWrap.cs" />
+    <Compile Include="Assets\LuaFramework\Source\Generate\AssetObjectWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\DelegateFactory.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_ContainerWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_ControllerWrap.cs" />
@@ -328,6 +329,7 @@
     <Compile Include="Assets\LuaFramework\Source\Generate\UnityEngine_TransformWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\UnityEngine_WrapModeWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\UnityEngine_WWWWrap.cs" />
+    <Compile Include="Assets\LuaFramework\Source\Generate\Utils_CachedMonoBehaviourWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\UtilWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\LuaConst.cs" />
     <Compile Include="Assets\LuaFramework\ToLua\BaseType\LuaInterface_EventObjectWrap.cs" />

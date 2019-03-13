@@ -35,7 +35,7 @@ func handleLogin(args []interface{}) {
 		Gold: 1000,
 		Name: m.GetAccountId(),
 	}
-	log.Release("handleLogin %d id:%d", m.GetAccountId(), uid)
+	log.Release("handleLogin %v id:%v", m.GetAccountId(), uid)
 
 	game.ChanRPC.Go("NewPlayer", unit, uid, a)
 

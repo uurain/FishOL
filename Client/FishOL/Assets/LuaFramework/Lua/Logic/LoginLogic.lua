@@ -26,9 +26,10 @@ end
 
 function LoginLogic:OnNetError()
 	self.loginState = _ELoginState.none
-	UIManager.ShowPanel(UIPanelType.CheckBox, function (ui)
-		ui:UpdateUI("断开连接！", 0)
-	end)
+	logError("login new error!")
+	-- UIManager.ShowPanel(UIPanelType.CheckBox, function (ui)
+	-- 	ui:UpdateUI("断开连接！", 0)
+	-- end)
 end
 
 function LoginLogic:OnAckLogin(msg)

@@ -1,4 +1,4 @@
-local SceneMoveLogic = Class("FishMoveLogic")
+local SceneMoveLogic = class("FishMoveLogic")
 
 local _EType = {
 	fish = 1, bullet = 2
@@ -14,6 +14,7 @@ function SceneMoveLogic:Init()
 end
 
 function SceneMoveLogic:CreateFish(fishId, fishDbId, pathId)
+	log("CreateFish:"..fishDbId)
 	local tempTable = self:GetCached(fishDbId, _EType.fish)
 	local fromCached = true
 	if tempTable == nil then
@@ -26,7 +27,8 @@ function SceneMoveLogic:CreateFish(fishId, fishDbId, pathId)
 	if not fromCached then
 		local fishDb = DbMgr.GetFishDb(fishDbId)
 		tempTable.db = fishDb
-		tempTable.compt = require("Logic.Component.FishCompt").new(fishDb)
+		tempTable.compt = require("Logic.Component.FishCompt").new()
+		tempTable.compt:Init(fishDb)
 	end
 	self.fishTable[fishId] = tempTable
 end

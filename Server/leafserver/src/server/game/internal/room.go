@@ -96,7 +96,7 @@ func (self *Room) CreateFish() {
 	}
 	self.SyncMsg(0, msgInfo)
 
-	log.Release("create fish:%v", fish.configId)
+	//log.Release("create fish:%v", fish.configId)
 }
 
 func (self *Room) DeleteFish(fishId int32){
@@ -176,7 +176,7 @@ func (self *Room) ReqBullet(p *Player, sPos *vector.Vector3, tPos *vector.Vector
 }
 
 func (self *Room) ReqBehitFish(p *Player, fish *Fish, addGold int32) {
-	msgInfo := &msg.AckHitFish{
+	msgInfo := &msg.ReqAckHitFish{
 		Uid: proto.Int32(p.Ident),
 		FishId: proto.Int32(fish.ident),
 		RewardGold: proto.Int32(addGold),

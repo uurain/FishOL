@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="fd963euj" jpegQuality="80" compressPNG="true">
   <resources>
-    <component id="or8y0" name="Battle.xml" path="/" exported="true"/>
+    <component id="or8y0" name="Room.xml" path="/" exported="true"/>
     <image id="v1871" name="Gun_1.png" path="/Img/" exported="true"/>
     <image id="v1872" name="Gun_2.png" path="/Img/" exported="true"/>
     <image id="v1873" name="Gun_3.png" path="/Img/" exported="true"/>
@@ -23,5 +23,5 @@
     <component id="v187k" name="touchPad.xml" path="/"/>
     <component id="v187l" name="GunPanel.xml" path="/"/>
   </resources>
-  <publish name="Battle" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Room"/>
+  <publish name="Room" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Room"/>
 </packageDescription>
