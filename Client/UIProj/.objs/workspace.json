@@ -1,9 +1,13 @@
 {
+	"hidden_packages": [],
 	"active_doc": [
 		"fd963euj",
 		"or8y0"
 	],
-	"hidden_packages": [],
+	"expanded_nodes": [
+		"fd963euj",
+		"/"
+	],
 	"docs": [
 		"frg4tunr",
 		"or8y0",
@@ -31,11 +35,5 @@
 		"v187k",
 		"fd963euj",
 		"v187l"
-	],
-	"expanded_nodes": [
-		"frg4tunr",
-		"/",
-		"fd963euj",
-		"/"
 	]
 }

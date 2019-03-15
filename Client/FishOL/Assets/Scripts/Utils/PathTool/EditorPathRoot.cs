@@ -18,7 +18,7 @@ public class EditorPathRoot : MonoBehaviour
         public List<PathVector3> posList = new List<PathVector3>();
     }
 
-    public int pathId = 1;
+    public int pathId = 0;
     public List<BaseNode> nodeList = new List<BaseNode>();
 
     [Button("添加一个Bezier路径")]
@@ -50,7 +50,13 @@ public class EditorPathRoot : MonoBehaviour
         List<Vector3> posList = new List<Vector3>();
         for(int i = 0; i < nodeList.Count; ++i)
         {
-            posList.AddRange(nodeList[i].GetNodePath());
+            List<Vector3> tempList = new List<Vector3>();
+            tempList.AddRange(nodeList[i].GetNodePath());
+            if (i > 0)
+            {
+                tempList.RemoveAt(0);
+            }
+            posList.AddRange(tempList);
         }
 
         PathData pathData = new PathData();
