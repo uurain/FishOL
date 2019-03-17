@@ -18,6 +18,8 @@ public static class LuaBinder
 		NetworkMgrWrap.Register(L);
 		UtilWrap.Register(L);
 		AssetObjectWrap.Register(L);
+		FishTriggerWrap.Register(L);
+		BulletTriggerWrap.Register(L);
 		L.BeginModule("LuaInterface");
 		LuaInterface_LuaInjectionStationWrap.Register(L);
 		LuaInterface_InjectTypeWrap.Register(L);

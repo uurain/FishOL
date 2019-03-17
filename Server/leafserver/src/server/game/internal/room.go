@@ -78,8 +78,8 @@ func (self *Room) IsFull() bool {
 
 func (self *Room) CreateFish() {
 	self.fishBaseId ++
-	dbId := rand.Int31n(10)+1
-	pathDbId := rand.Int31n(10)+1
+	dbId := rand.Int31n(7)+1
+	pathDbId := rand.Int31n(5)+1
 	fish := &Fish{
 		ident: self.fishBaseId,
 		configId: dbId,
@@ -158,17 +158,20 @@ func (self *Room) AckLeaveRoom(playerId int32) {
 }
 
 // 玩家发射子弹
-func (self *Room) AckBullet(playerId int32, sPos *vector.Vector3, tPos *vector.Vector3, configId int) {
+func (self *Room) AckBullet(playerId int32, sPos *vector.Vector3, tPos *vector.Vector3, configId int32) {
 	var player = self.GetPlayer(playerId)
 	if player != nil {
 		self.ReqBullet(player, sPos, tPos, configId)
+		//  这里需要读取子弹消耗的金币
+		player.Unit.Gold -= configId
+		player.SyncProperty()
 	}
 }
 
-func (self *Room) ReqBullet(p *Player, sPos *vector.Vector3, tPos *vector.Vector3, configId int) {
+func (self *Room) ReqBullet(p *Player, sPos *vector.Vector3, tPos *vector.Vector3, configId int32) {
 	msgInfo := &msg.ReqAckBullet{
-		Uid: proto.Int32(int32(p.Ident)),
-		BulletType: proto.Int32(int32(configId)),
+		Uid: proto.Int32(p.Ident),
+		BulletType: proto.Int32(configId),
 		SPos: CovertPbVector2(sPos),
 		Tpos: CovertPbVector2(tPos),
 	}

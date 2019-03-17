@@ -198,3 +198,10 @@ function string.join(strArr, delimiter)
     str = string.sub(str, string.len(delimiter) + 1)
     return str
 end
+
+function FileRead(filePath)
+    local file = io.open(filePath,"r")
+    local fileStr = file:read("*a");
+    file:close()
+    return fileStr
+end

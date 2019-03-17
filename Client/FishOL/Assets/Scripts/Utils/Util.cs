@@ -278,7 +278,7 @@ public class Util
             string game = AppConst.AppName.ToLower();
             if (Application.isMobilePlatform)
             {
-                return Application.persistentDataPath + "/" + game + "/";
+                return Application.persistentDataPath + "/";
             }
             if (AppConst.DebugMode)
             {

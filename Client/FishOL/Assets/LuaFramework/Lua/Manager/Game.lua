@@ -20,6 +20,7 @@ require "Manager/PreloadMgr"
 require "Manager/ConstMgr"
 require "Manager/PlayerData"
 require "Manager/DbMgr"
+require "Manager/PathMgr"
 
 
 

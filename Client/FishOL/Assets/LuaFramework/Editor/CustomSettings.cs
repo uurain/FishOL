@@ -201,6 +201,8 @@ public static class CustomSettings
         _GT(typeof(NetworkMgr)),
         _GT(typeof(Util)),
         _GT(typeof(AssetObject)),
+        _GT(typeof(FishTrigger)),
+        _GT(typeof(BulletTrigger)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

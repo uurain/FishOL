@@ -7,7 +7,7 @@ function BaseCompt:ctor()
 end
 
 function BaseCompt:Init()
-    self.rootWorldObj = GameObject.New("FishModel")
+    self.rootWorldObj = GameObject.New("RootWorld")
     GameObject.DontDestroyOnLoad(self.rootWorldObj)
 end
 
@@ -33,6 +33,10 @@ function BaseCompt:SetLocalPos(val)
 	if self.rootWorldObj ~= nil then
     	self.rootWorldObj.transform.localPosition = val
 	end
+end
+
+function BaseCompt:OnUpdate(deltaTime)
+    -- body
 end
 
 function BaseCompt:Dispose()

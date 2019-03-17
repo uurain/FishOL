@@ -11,6 +11,9 @@ function SceneMoveLogic:Init()
 	self.cachedTable = {}
 	self.cachedTable[_EType.fish] = {}
 	self.cachedTable[_EType.bullet] = {}
+	
+	self.updateHandle = UpdateBeat:CreateListener(self.OnUpdate, self)
+	UpdateBeat:AddListener(self.updateHandle)	
 end
 
 function SceneMoveLogic:CreateFish(fishId, fishDbId, pathId)
@@ -21,8 +24,8 @@ function SceneMoveLogic:CreateFish(fishId, fishDbId, pathId)
 		tempTable = {}
 		fromCached = false
 	end
-	tempTable.fishId = fishId
-	tempTable.fishDbId = fishDbId
+	tempTable.id = fishId
+	tempTable.dbId = fishDbId
 	tempTable.pathId = pathId
 	if not fromCached then
 		local fishDb = DbMgr.GetFishDb(fishDbId)
@@ -30,53 +33,78 @@ function SceneMoveLogic:CreateFish(fishId, fishDbId, pathId)
 		tempTable.compt = require("Logic.Component.FishCompt").new()
 		tempTable.compt:Init(fishDb)
 	end
+	tempTable.compt:Begin(pathId, fishId)
 	self.fishTable[fishId] = tempTable
 end
 
-function SceneMoveLogic:CreateBullet(bulletId, bulletDbId, sPos, tPos)
-	local tempTable = self:GetCached(bulletId, _EType.bullet)
+function SceneMoveLogic:CreateBullet(bulletDbId, sPos, tPos)
+	local tempTable = self:GetCached(bulletDbId, _EType.bullet)
 	local fromCached = true
 	if tempTable == nil then
 		tempTable = {}
 		fromCached = false
 	end
-	tempTable.fishId = fishId
-	tempTable.bulletDbId = bulletDbId
+	tempTable.dbId = bulletDbId
 	tempTable.tPos = tPos
 	if not fromCached then
 		local bulletDb = DbMgr.GetBulletDb(bulletDbId)
 		tempTable.db = bulletDb
 		tempTable.compt = require("Logic.Component.BulletCompt").new(bulletDb)
+		tempTable.compt:Init(bulletDb)
 	end
-	tempTable.compt:SetLocalPos(sPos)
-	self.bulletTable[fishId] = tempTable
+	tempTable.compt:Begin(sPos, tPos)
+	table.insert(self.bulletTable, tempTable)
 end
 
-function SceneMoveLogic:RemoveFish(fishId)
-	self:RemoveObj(self.fishTable, fishId, _EType.fish)
+function SceneMoveLogic:OnFishTrigger(fishId)
+	local fishTable = self.fishTable[fishId]
+	if fishTable ~= nil then
+		fishTable.compt:PlayAni("heart")
+	end
 end
 
-function SceneMoveLogic:RemoveBullet(bulletId)
-	self:RemoveObj(self.bulletTable, bulletId, _EType.bullet)
+function SceneMoveLogic:RemoveFish(id)
+	local obj = self.fishTable[id]
+	if obj ~= nil then
+		self:AddCached(obj.dbId, _EType.fish, obj)
+	end
+	self.fishTable[id] = nil
+end
+
+function SceneMoveLogic:RemoveBullet(obj)
+	for k,v in pairs(self.bulletTable) do
+		if v == obj then		
+			self:AddCached(obj.dbId, _EType.bullet, obj)
+			self.bulletTable[k] = nil
+			break
+		end
+	end
 end
 
 function SceneMoveLogic:GetCached(dbId, etype)
-	local cachedObj = self.cachedTable[etype][dbId]
-	if cachedObj ~= nil then
-		self.cachedTable[etype][dbId] = nil
+	local cachedDbIdTable = self.cachedTable[etype][dbId]
+	if cachedDbIdTable ~= nil then
+		local count = #cachedDbIdTable
+		if count > 0 then
+			local obj = cachedDbIdTable[count]
+			cachedDbIdTable[count] = nil
+			return obj
+		end
 	end
 	return cachedObj
 end
 
-function SceneMoveLogic:RemoveObj(objTable, objId, etype)
-	local obj = objTable[objId]
-	if obj ~= nil then
-		self.cachedTable[etype][obj.fishDbId] = obj
+function SceneMoveLogic:AddCached(dbId, etype, obj)
+	local cachedDbIdTable = self.cachedTable[etype][dbId]
+	if cachedDbIdTable == nil then
+		cachedDbIdTable = {}
+		self.cachedTable[etype][dbId] = cachedDbIdTable
 	end
-	objTable[objId] = nil
+	table.insert(cachedDbIdTable, obj)
 end
 
 function SceneMoveLogic:Dispose()
+	UpdateBeat:RemoveListener(self.updateHandle)
 	self:ClearTable(self.cachedTable[_EType.fish])
 	self:ClearTable(self.cachedTable[_EType.bullet])
 	self:ClearTable(self.fishTable)
@@ -92,7 +120,16 @@ end
 
 function SceneMoveLogic:OnUpdate()
 	for k,v in pairs(self.bulletTable) do
-		
+		if v.compt.isEnd then
+			v.compt.isEnd = false
+			self:RemoveBullet(v)
+		else
+			v.compt:OnUpdate(Time.deltaTime)
+		end		
+	end
+
+	for k, v in pairs(self.fishTable) do
+		v.compt:OnUpdate(Time.deltaTime)
 	end
 end
 

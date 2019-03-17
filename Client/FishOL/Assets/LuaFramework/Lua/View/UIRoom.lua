@@ -9,7 +9,6 @@ function UIRoom:Init()
 	self.rewardPanel = self.view:GetChild("rewardPanel")
 	self.rewardPanel.visible = false
 
-	self.gunIcon = self.view:GetChild("gunIcon")
 	self.firePanel = self.view:GetChild("firePanel")
 	self.firePanel.onClick:Add(self.OnClickFire, self)
 
@@ -20,9 +19,11 @@ function UIRoom:Init()
 		self.gunTable[i].item = item
 		self.gunTable[i].btnLeft = item:GetChild("btnLeftGun")
 		self.gunTable[i].btnRight = item:GetChild("btnRightGun")
-		self.gunTable[i].gunIcon = item:GetChild("gunIcon")
+		self.gunTable[i].gun = item:GetChild("gun")
+		self.gunTable[i].gunIcon = self.gunTable[i].gun:GetChild("icon")
 		self.gunTable[i].ctState = item:GetController("ctState")
 		self.gunTable[i].ctArr = item:GetController("ctArr")
+		self.gunTable[i].gunPt = self.gunTable[i].gun:GetChild("gunPt")
 
 		self.gunTable[i].ctState.selectedIndex = 1
 		self.gunTable[i].ctArr.selectedIndex = 1
@@ -43,15 +44,17 @@ function UIRoom:Init()
 
 	self.curGunIndex = 1	
 	self.roomLogic = LogicManager.Get(LogicType.Room)
+	self.localPlayer = nil
 end
 
 function UIRoom:Show()
 
 	if self.updatePlayerHandler == nil then
 		self.updatePlayerHandler = handler(self.UpdatePlayer, self)
-		logError("RegisterCallback 1")
 		self.roomLogic:RegisterCallback("Action_Room_PlayerEnterLeave", self.updatePlayerHandler)
 	end
+
+	self:UpdateGold()
 
 	self.super.Show(self)
 end
@@ -73,16 +76,31 @@ function UIRoom:OnClickBack()
 end
 
 function UIRoom:OnClickFire()
-	log("OnClickFire1")
 	if self.mineGun ~= nil then
-		log("OnClickFire2")
-		local gunIconPos = self.mineGun.gunIcon:LocalToGlobal(Vector2.zero)
+		local gunPos = self.mineGun.gun:LocalToGlobal(Vector2.zero)
 		local touchPos = Stage.inst.touchPosition
-		touchPos:Sub(gunIconPos)
-		local angle = Vector2.Angle(touchPos, Vector2.New(1, 0))
-		log(angle)
-		self.mineGun.gunIcon.rotation = 90 - angle
 
+		touchPos:Sub(gunPos)
+		local angle = Vector2.Angle(touchPos, Vector2.New(1, 0))
+		self.mineGun.gun.rotation = 90 - angle
+
+		if self.roomLogic:CanFire(self.curGunIndex) then
+			local touchTpos = Stage.inst.touchPosition
+			local gunPtPos = self.mineGun.gunPt:LocalToGlobal(Vector2.zero)
+			gunPtPos.y = Screen.height - gunPtPos.y
+			touchTpos.y = Screen.height - touchTpos.y
+
+			local sPos = MainCam:ScreenToWorldPoint(Vector3(gunPtPos.x, gunPtPos.y, 20))
+
+			local tempPos = MainCam:ScreenToWorldPoint(Vector3(touchTpos.x, touchTpos.y, 20))
+			local tPos = Vector3.New(tempPos.x, tempPos.y, tempPos.z)
+			tPos:Add(tempPos:Sub(sPos).normalized:Mul(50))
+			self.roomLogic:ReqFire(self.curGunIndex, sPos, tPos)
+
+			self:UpdateGold()
+		else
+			logError("金币不够")
+		end
         -- local screenPos = self.btnOk:LocalToGlobal(Vector2.New(self.btnOk.width/2, self.btnOk.height/2))
         -- local screen3pos = Vector3.New(screenPos.x, screenPos.y, modeScale/1000 - gameSceneMgr.ui3dCam.transform.localPosition.z)
         -- local ui3dCamPos = gameSceneMgr.ui3dCam:ScreenToWorldPoint(screen3pos)
@@ -116,11 +134,16 @@ function UIRoom:UpdatePlayer(index, player)
 	else
 		gunItem.ctState.selectedIndex = 1
 		if player:IsMine() then
+			self.localPlayer = player
 			self.mineGun = gunItem
 			gunItem.ctArr.selectedIndex = 0
 		end
 		gunItem.item.title = player:GetName()
 	end
+end
+
+function UIRoom:UpdateGold()
+	self.goldPanel.title = PlayerData.gold
 end
 
 function UIRoom:InitPlayerTable()

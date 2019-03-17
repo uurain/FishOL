@@ -35,6 +35,7 @@ func rpcNewPlayer(args []interface{}){
 		Agent: agent,
 	}
 	playerMap[uid] = player
+	player.SyncProperty()
 }
 
 func rpcCloseAgent(args []interface{}) {

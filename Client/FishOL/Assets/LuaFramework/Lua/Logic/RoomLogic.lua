@@ -74,8 +74,17 @@ function RoomLogic:PlayerEnter(playerInfo)
 	self.super.DoEvent(self, "Action_Room_PlayerEnterLeave", playerInfo.table_index, player)
 end
 
-function RoomLogic:ReqFire(bulletType, sPos, tPos)
-	Msg_ReqBullet(PlayerData.uid, bulletType, sPos, tPos)
+function RoomLogic:CanFire(bulletId)
+	local cast = DbMgr.GetBulletDb(bulletId).cast
+	if PlayerData.gold < cast then
+		return false
+	end
+	return true
+end
+
+function RoomLogic:ReqFire(bulletDbId, sPos, tPos)
+	self.sceneMoveLogic:CreateBullet(bulletDbId, sPos, tPos)
+	-- Msg_ReqBullet(PlayerData.uid, bulletType, sPos, tPos)
 end
 
 function RoomLogic:ReqLeaveRoom()

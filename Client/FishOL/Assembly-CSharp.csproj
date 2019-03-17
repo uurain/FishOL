@@ -227,6 +227,7 @@
     <Compile Include="Assets\FairyGUI\Scripts\Utils\ZipReader.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\AppConstWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\AssetObjectWrap.cs" />
+    <Compile Include="Assets\LuaFramework\Source\Generate\BulletTriggerWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\DelegateFactory.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_ContainerWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_ControllerWrap.cs" />
@@ -268,6 +269,7 @@
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_UIObjectFactoryWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_UIPackageWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\FairyGUI_WindowWrap.cs" />
+    <Compile Include="Assets\LuaFramework\Source\Generate\FishTriggerWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\GameMgrWrap.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\LuaBinder.cs" />
     <Compile Include="Assets\LuaFramework\Source\Generate\LuaInterface_DebuggerWrap.cs" />
@@ -545,7 +547,9 @@
     <Compile Include="Assets\Scripts\Camera\CameraShakeData.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraShakeUtil.cs" />
     <Compile Include="Assets\Scripts\Logic\AssetObject.cs" />
+    <Compile Include="Assets\Scripts\Logic\BulletTrigger.cs" />
     <Compile Include="Assets\Scripts\Logic\EventEnum.cs" />
+    <Compile Include="Assets\Scripts\Logic\FishTrigger.cs" />
     <Compile Include="Assets\Scripts\Logic\PgJoystick.cs" />
     <Compile Include="Assets\Scripts\Logic\VoiceCached.cs" />
     <Compile Include="Assets\Scripts\Logic\VoiceManager.cs" />

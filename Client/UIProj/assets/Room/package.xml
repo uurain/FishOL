@@ -22,6 +22,7 @@
     <component id="v187j" name="Reward.xml" path="/"/>
     <component id="v187k" name="touchPad.xml" path="/"/>
     <component id="v187l" name="GunPanel.xml" path="/"/>
+    <component id="oo6rm" name="gun.xml" path="/"/>
   </resources>
   <publish name="Room" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Room"/>
 </packageDescription>

@@ -50,7 +50,7 @@ func handleBullet(args []interface{}) {
 	player := GetPlayer(uid)
 	if player != nil {
 		if player.CanFire(msgInfo.GetBulletType()) {
-			room.AckBullet(uid, ConvertVector2To3(msgInfo.GetSPos()), ConvertVector2To3(msgInfo.GetTpos()), int(msgInfo.GetBulletType()))
+			room.AckBullet(uid, ConvertVector2To3(msgInfo.GetSPos()), ConvertVector2To3(msgInfo.GetTpos()), msgInfo.GetBulletType())
 		}else
 		{
 			agent.WriteMsg(&msg.AckError{

@@ -4,14 +4,6 @@ function PlayerLogic:Init(data)
 	self.info = data
 end
 
-function PlayerLogic:CanFire(bulletType)
-	local cast = bulletType
-	if self.info.player_info.gold < cast then
-		return 1
-	end
-	return 0
-end
-
 function PlayerLogic:GetName()
 	return self.info.player_info.name
 end

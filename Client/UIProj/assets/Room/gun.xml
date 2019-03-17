@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,105" pivot="0.5,0.87" anchor="true">
+  <controller name="ctState" pages="0,有人,1,无人" selected="0"/>
+  <displayList>
+    <loader id="n5_v187" name="icon" xy="38,92" pivot="0.5,0.88" anchor="true" size="76,105" url="ui://fd963eujv1871" autoSize="true">
+      <gearIcon controller="ctState" default="ui://fd963eujv1871"/>
+    </loader>
+    <component id="n8_oo6r" name="gunPt" src="v187k" fileName="touchPad.xml" xy="39,0" touchable="false">
+      <relation target="n5_v187" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>
