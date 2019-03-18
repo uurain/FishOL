@@ -17,6 +17,7 @@ func init() {
 	handleMsg(&msg.ReqAckEnterRoom{}, handleEnterRoom)
 	handleMsg(&msg.ReqAckLeaveRoom{}, handleLeaveRoom)
 	handleMsg(&msg.ReqAckBullet{}, handleBullet)
+	handleMsg(&msg.ReqAckHitFish{}, handleHitFish)
 
 	room.Init()
 }
@@ -57,5 +58,15 @@ func handleBullet(args []interface{}) {
 				ErrorCode: proto.Int32(int32(msg.EGameEventCode_Code_Not_Enough_Gold)),
 			})
 		}
+	}
+}
+
+func handleHitFish(args []interface{})  {
+	msgInfo := args[0].(*msg.ReqAckHitFish)
+	agent := args[1].(gate.Agent)
+	uid := agent.UserData().(int32)
+	player := GetPlayer(uid)
+	if player != nil {
+		room.AckBehitFish(player, msgInfo.GetFishId())
 	}
 }

@@ -38,6 +38,13 @@ func (self *Room) BeginTick() {
 
 func (self *Room) Update() {
 	self.CreateFish()
+
+	for _, v := range  self.fishMap{
+		if time.Now().Unix() - v.createTime > 30 {
+			self.DeleteFish(v.ident)
+			break
+		}
+	}
 }
 
 func (self *Room) AddPlayer(p *Player) {
@@ -84,6 +91,8 @@ func (self *Room) CreateFish() {
 		ident: self.fishBaseId,
 		configId: dbId,
 		pathId: pathDbId,
+		createTime:time.Now().Unix(),
+		gold:dbId,
 	}
 	fish.Init()
 	self.fishMap[fish.ident] = fish
@@ -112,8 +121,8 @@ func (self *Room) AckBehitFish(p *Player, ident int32) {
 	fish, isExit := self.fishMap[ident]
 	if isExit {
 		if rand.Uint32() > 50000 {
-			self.ReqBehitFish(p, fish, 10)
-			p.Unit.Gold += 10
+			self.ReqBehitFish(p, fish, fish.gold)
+			p.Unit.Gold += fish.gold
 			delete(self.fishMap, ident)
 		} else {
 			log.Release("%s未命中%d", p.Ident, ident)
