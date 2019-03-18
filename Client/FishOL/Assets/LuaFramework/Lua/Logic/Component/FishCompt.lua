@@ -25,6 +25,7 @@ function FishCompt:Init(fishDb)
 end
 
 function FishCompt:Begin(pathId, fishId)
+	self:SetVisible(true)
 	self.fishId = fishId
     self.pathTable = PathMgr.GetPath(pathId)
     self.pathCount = #self.pathTable

@@ -52,7 +52,7 @@ end
 
 --Socket消息 所有的消息都从这里回调--
 function Network.OnSocket(key, data)
-    log("OnSocket id:"..key)
+    -- log("OnSocket id:"..key)
     if Msg.Func[key] then
         local res = Msg.Func[key](data)
         Network.BrocastMsg(key, res)

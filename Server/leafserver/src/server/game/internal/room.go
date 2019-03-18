@@ -92,7 +92,7 @@ func (self *Room) CreateFish() {
 		configId: dbId,
 		pathId: pathDbId,
 		createTime:time.Now().Unix(),
-		gold:dbId,
+		gold:dbId*10,
 	}
 	fish.Init()
 	self.fishMap[fish.ident] = fish
@@ -120,12 +120,13 @@ func (self *Room) DeleteFish(fishId int32){
 func (self *Room) AckBehitFish(p *Player, ident int32) {
 	fish, isExit := self.fishMap[ident]
 	if isExit {
-		if rand.Uint32() > 50000 {
+		if rand.Int31n(100) > 30 {
 			self.ReqBehitFish(p, fish, fish.gold)
 			p.Unit.Gold += fish.gold
+			p.SyncProperty()
 			delete(self.fishMap, ident)
 		} else {
-			log.Release("%s未命中%d", p.Ident, ident)
+			log.Release("%v未命中%v", p.Ident, ident)
 		}
 	}
 }

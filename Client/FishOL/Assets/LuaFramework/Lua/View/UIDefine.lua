@@ -40,5 +40,6 @@ UIPanelType = {
 	Loading = { name = "Loading", uType = UIType.base, fullScreen = true, pkgName = "Loading"},
 	Room = { name = "Room", uType = UIType.base, fullScreen = true, pkgName = "Room"},
 	Hall = { name = "Hall", uType = UIType.base, fullScreen = true, pkgName = "Hall"},
+	Tip = { name = "Tip", uType = UIType.tip, fullScreen = true, pkgName = "Common"},
 	CheckBox = { name = "CheckBox", uType = UIType.window, anchor = UIPanelAnchor.center, pkgName = "Common"},
 }

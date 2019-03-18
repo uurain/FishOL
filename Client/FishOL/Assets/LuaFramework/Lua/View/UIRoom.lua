@@ -16,6 +16,7 @@ function UIRoom:Init()
 	for i=1,4 do
 		self.gunTable[i] = {}
 		local item = self.view:GetChild("Gun"..i)
+		self.gunTable[i].index = i
 		self.gunTable[i].item = item
 		self.gunTable[i].btnLeft = item:GetChild("btnLeftGun")
 		self.gunTable[i].btnRight = item:GetChild("btnRightGun")
@@ -45,6 +46,8 @@ function UIRoom:Init()
 	self.curGunIndex = 1	
 	self.roomLogic = LogicManager.Get(LogicType.Room)
 	self.localPlayer = nil
+
+	self.roomLogic:RegisterCallback("Action_Room_HitFish", handler(self.OnHitFish, self))
 end
 
 function UIRoom:Show()
@@ -82,7 +85,12 @@ function UIRoom:OnClickFire()
 
 		touchPos:Sub(gunPos)
 		local angle = Vector2.Angle(touchPos, Vector2.New(1, 0))
-		self.mineGun.gun.rotation = 90 - angle
+
+		if self.mineGun.index > 2 then
+			self.mineGun.gun.rotation = angle + 270
+		else
+			self.mineGun.gun.rotation = 90 - angle
+		end		
 
 		if self.roomLogic:CanFire(self.curGunIndex) then
 			local touchTpos = Stage.inst.touchPosition
@@ -107,6 +115,12 @@ function UIRoom:OnClickFire()
 	end
 end
 
+function UIRoom:OnHitFish(rewardGold)
+	UIManager.ShowPanel(UIPanelType.Tip, function (ui)
+		ui:ShowTip("获得金币:"..rewardGold)
+	end)
+end
+
 function UIRoom:ChangeGun(index, isLeft)
 	if isLeft then
 		self.curGunIndex = self.curGunIndex -1
@@ -126,6 +140,7 @@ end
 
 function UIRoom:UpdatePlayer(index, player)
 
+	log("UpdatePlayer:"..index)
 	local gunItem = self.gunTable[index+1]
 
 	gunItem.ctArr.selectedIndex = 1

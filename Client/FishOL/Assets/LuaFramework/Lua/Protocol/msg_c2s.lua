@@ -21,8 +21,10 @@ function Msg_ReqBullet(uid, bulletType, sPos, tPos)
  	local req = Protol.MsgDefine_pb.ReqAckBullet()
  	req.uid = uid
  	req.bullet_type = bulletType
- 	req.tpos = tpos
- 	req.sPos = sPos
+ 	req.tpos.x = tPos.x
+ 	req.tpos.y = tPos.y
+ 	req.sPos.x = sPos.x
+ 	req.sPos.y = sPos.y
  	local reqBuff = req:SerializeToString()
     Network.SendMessage(Msg.Id.ReqAckBullet, reqBuff)
 end

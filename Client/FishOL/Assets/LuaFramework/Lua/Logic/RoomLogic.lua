@@ -14,7 +14,8 @@ function RoomLogic:Init()
 end
 
 function RoomLogic:OnBullet(msg)
-	self.super.DoEvent(self, "Action_Room_Bullet", msg)
+	self.sceneMoveLogic:CreateBullet(msg.bullet_type, msg.uid, Vector3.New(msg.sPos.x, msg.sPos.y, 20), Vector3.New(msg.tPos.x, msg.tPos.y, 20))
+
 end
 
 function RoomLogic:OnLeaveRoom(msg)
@@ -29,8 +30,12 @@ function RoomLogic:OnFishOpt(msg)
 	end
 end
 
-function RoomLogic:OnHitFish(msg)
-	self.super.DoEvent(self, "Action_Room_HitFish", msg)
+function RoomLogic:OnHitFish(msg)	
+	self.sceneMoveLogic:HitFishSucess(msg.fish_id)
+
+	if msg.uid == PlayerData.uid then
+		self.super.DoEvent(self, "Action_Room_HitFish", msg.reward_gold)
+	end
 end
 
 function RoomLogic:OnPlayerEntryList(msg)
@@ -70,7 +75,7 @@ function RoomLogic:PlayerEnter(playerInfo)
 		PlayerData.gold = playerInfo.player_info.gold
 	end
 
-	log("PlayerEnter6")
+	log("PlayerEnter6") --playerInfo.table_index
 	self.super.DoEvent(self, "Action_Room_PlayerEnterLeave", playerInfo.table_index, player)
 end
 
@@ -83,8 +88,8 @@ function RoomLogic:CanFire(bulletId)
 end
 
 function RoomLogic:ReqFire(bulletDbId, sPos, tPos)
-	self.sceneMoveLogic:CreateBullet(bulletDbId, sPos, tPos)
-	-- Msg_ReqBullet(PlayerData.uid, bulletType, sPos, tPos)
+	self.sceneMoveLogic:CreateBullet(bulletDbId, PlayerData.uid, sPos, tPos)
+	Msg_ReqBullet(PlayerData.uid, bulletDbId, sPos, tPos)
 end
 
 function RoomLogic:ReqLeaveRoom()

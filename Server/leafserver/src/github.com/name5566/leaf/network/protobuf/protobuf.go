@@ -146,8 +146,6 @@ func (p *Processor) Unmarshal(data []byte) (interface{}, error) {
 		return nil, fmt.Errorf("message id %v not registered", id)
 	}
 
-	fmt.Println(id)
-
 	// msg
 	i := p.msgInfo[id]
 	if i.msgRawHandler != nil {

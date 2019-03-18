@@ -22,8 +22,9 @@ function BulletCompt:Init(bulletDb)
     self.bulletDb = bulletDb
 end
 
-function BulletCompt:Begin(sPos, tPos)
+function BulletCompt:Begin(uid, sPos, tPos)
 	self:SetLocalPos(sPos)
+	self.uid = uid
     self.isTargetPos = false
     self.isEnd = false
     self:SetVisible(true)
@@ -61,7 +62,7 @@ end
 function BulletCompt:OnTrigger(fishId)
 	logError("OnTrigger:"..fishId)
 	self:OnMoveEnd()
-	LogicManager.Get(LogicType.SceneMove):OnFishTrigger(fishId)
+	LogicManager.Get(LogicType.SceneMove):OnFishTrigger(fishId, self.uid)
 end
 
 function BulletCompt:OnMoveEnd()

@@ -37,7 +37,7 @@ function SceneMoveLogic:CreateFish(fishId, fishDbId, pathId)
 	self.fishTable[fishId] = tempTable
 end
 
-function SceneMoveLogic:CreateBullet(bulletDbId, sPos, tPos)
+function SceneMoveLogic:CreateBullet(bulletDbId, uid, sPos, tPos)
 	local tempTable = self:GetCached(bulletDbId, _EType.bullet)
 	local fromCached = true
 	if tempTable == nil then
@@ -52,14 +52,27 @@ function SceneMoveLogic:CreateBullet(bulletDbId, sPos, tPos)
 		tempTable.compt = require("Logic.Component.BulletCompt").new(bulletDb)
 		tempTable.compt:Init(bulletDb)
 	end
-	tempTable.compt:Begin(sPos, tPos)
+	tempTable.compt:Begin(uid, sPos, tPos)
 	table.insert(self.bulletTable, tempTable)
 end
 
-function SceneMoveLogic:OnFishTrigger(fishId)
+function SceneMoveLogic:OnFishTrigger(fishId, uid)
 	local fishTable = self.fishTable[fishId]
 	if fishTable ~= nil then
 		fishTable.compt:PlayAni("heart")
+
+		if uid == PlayerData.uid then
+			logError("Msg_ReqHitFish")
+			Msg_ReqHitFish(uid, fishId)
+		end
+	end
+end
+
+function SceneMoveLogic:HitFishSucess(fishId)
+	local fishTable = self.fishTable[fishId]
+	if fishTable ~= nil then
+		logError("hit fish sucess:"..fishId)
+		self:RemoveFish(fishId)
 	end
 end
 
@@ -100,6 +113,7 @@ function SceneMoveLogic:AddCached(dbId, etype, obj)
 		cachedDbIdTable = {}
 		self.cachedTable[etype][dbId] = cachedDbIdTable
 	end
+	obj.compt:SetVisible(false)
 	table.insert(cachedDbIdTable, obj)
 end
 

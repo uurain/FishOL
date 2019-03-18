@@ -16,8 +16,5 @@ function PlayerLogic:GetTableIndex()
 	return self.info.table_index
 end
 
-function PlayerLogic:ReqHitFish(fishId)
-	Msg_ReqHitFish(self.info.uid, fishId)
-end
 
 return PlayerLogic

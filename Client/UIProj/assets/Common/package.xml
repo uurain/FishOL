@@ -133,6 +133,8 @@
     <image id="v1873l" name="btn2.png" path="/"/>
     <component id="v1873m" name="MyBtn1.xml" path="/" exported="true"/>
     <component id="v1873n" name="MyBtn2.xml" path="/" exported="true"/>
+    <component id="pj243o" name="Tip.xml" path="/" exported="true"/>
+    <component id="pj243p" name="tipItem.xml" path="/" exported="true"/>
   </resources>
   <publish name="Common" path="..\FishOL\Assets\AbAsset\UI\Package\&amp;Common"/>
 </packageDescription>

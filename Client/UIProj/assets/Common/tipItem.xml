@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,40" opaque="false" extention="Label">
+  <displayList>
+    <graph id="n3_pj24" name="bg" xy="-30,-5" pivot="0.5,0.5" size="162,50" group="n5_pj24" touchable="false" type="rect" fillColor="#ff29364f">
+      <relation target="n4_pj24" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n4_pj24" name="title" xy="-4,0" pivot="0.5,0.5" size="107,39" group="n5_pj24" fontSize="30" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" text="102222"/>
+    <group id="n5_pj24" name="n5" xy="-30,-5" size="161,50" advanced="true"/>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Alpha" target="n5_pj24" tween="true" startValue="1" endValue="0" duration="60" ease="Linear"/>
+  </transition>
+</component>
