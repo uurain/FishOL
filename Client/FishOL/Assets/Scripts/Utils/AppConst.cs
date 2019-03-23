@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class AppConst {
 #if UNITY_EDITOR
-    public const bool DebugMode = true;                       //调试模式-用于内部测试
+    public const bool DebugMode = false;                       //调试模式-用于内部测试
 #else
     public const bool DebugMode = false;   
 #endif

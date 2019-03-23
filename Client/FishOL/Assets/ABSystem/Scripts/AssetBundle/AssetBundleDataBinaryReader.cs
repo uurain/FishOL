@@ -20,7 +20,7 @@ namespace Tangzx.ABSystem
     ///     }
     /// }
     /// </summary>
-    class AssetBundleDataBinaryReader : AssetBundleDataReader
+    public class AssetBundleDataBinaryReader : AssetBundleDataReader
     {
         public override void Read(Stream fs)
         {

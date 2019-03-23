@@ -17,3 +17,6 @@ MonoBehaviour:
   - valid: 1
     path: Assets/AbAsset/UI/Package
     filter: '*.*'
+  - valid: 1
+    path: Assets/AbAsset
+    filter: '*.prefab'

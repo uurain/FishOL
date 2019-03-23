@@ -46,7 +46,7 @@ public class EditorPathRoot : MonoBehaviour
     [Button("生成路径")]
     private void CreatePathJson()
     {
-        string jsonPath = string.Format("{0}/StreamingAssets/path{1}.json", Application.dataPath, pathId);
+        string jsonPath = string.Format("{0}/StreamingAssets/config/path{1}.json", Application.dataPath, pathId);
         List<Vector3> posList = new List<Vector3>();
         for(int i = 0; i < nodeList.Count; ++i)
         {

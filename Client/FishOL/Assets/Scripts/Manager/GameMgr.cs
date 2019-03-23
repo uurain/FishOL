@@ -20,6 +20,7 @@ public class GameMgr : MonoBehaviour
     ResMgr _resMgr;
     SaveDataMgr _saveDataMgr;
     NetworkMgr _networkMgr;
+    DownloadMgr _downloadMgr;
 
     /// <summary>
     /// 初始化游戏管理器
@@ -77,6 +78,16 @@ public class GameMgr : MonoBehaviour
         }
     }
 
+    public DownloadMgr downloadMgr
+    {
+        get
+        {
+            if (_downloadMgr == null)
+                _downloadMgr = gameObject.AddUniqueCompoment<DownloadMgr>();
+            return _downloadMgr;
+        }
+    }
+
 
     void Update()
     {
@@ -89,7 +100,10 @@ public class GameMgr : MonoBehaviour
     void Init() {
         InitUIConfig();
 
-        resMgr.Initialize(OnInitialize);
+        UpdateMgr.Instance.ActionComplete = delegate() {
+            resMgr.Initialize(OnInitialize);
+        };
+        UpdateMgr.Instance.Begin();
     }
 
     void InitUIConfig()

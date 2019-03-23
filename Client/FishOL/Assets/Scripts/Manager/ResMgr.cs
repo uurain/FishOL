@@ -74,7 +74,7 @@ public class ResMgr : MonoBehaviour
             }
             else
             {
-                Debug.LogAssertionFormat("TaskLoader abinfonull:%{0}", path);
+                Debug.LogAssertionFormat("TaskLoader abinfonull:{0}", path);
             }
             RequstComplete();
         }
@@ -169,25 +169,21 @@ public class ResMgr : MonoBehaviour
     public void LoadPackage(string fullPath, Action<string> dl, LuaFunction luaFunc)
     {
 #if AB_MODE
-        assetManager.Load(fullPath, delegate (Tangzx.ABSystem.AssetBundleInfo abInfo) {
+        Load(fullPath, delegate (Tangzx.ABSystem.AssetBundleInfo abInfo) {
             string pkgName = "";
-            if (abInfo == null)
+            if (abInfo == null || abInfo.bundle == null)
             {
                 Debug.LogError("LoadPackage error:" + fullPath);
             }
             else
             {
-                // 这里改了个恶心的bug， 同时调用一样的图集的时候 第一次进来会直接卸载ab,第二次进来ab就已经没了。
-                // 所以这里需要做一下判断，按道理应该用package name来做判断 去个巧 这样判断也是可以满足需求
-                if (abInfo.bundle != null)
-                {
-                    pkgName = FairyGUI.UIPackage.AddPackage(abInfo.bundle).name;
-                }
+                pkgName = FairyGUI.UIPackage.AddPackage(abInfo.bundle).name;
+                abInfo.bundle = null;
                 assetManager.RemoveBundleInfo(abInfo);
             }
             if (dl != null)
                 dl(pkgName);
-            if(luaFunc != null)
+            if (luaFunc != null)
             {
                 luaFunc.Call(pkgName);
                 luaFunc.Dispose();

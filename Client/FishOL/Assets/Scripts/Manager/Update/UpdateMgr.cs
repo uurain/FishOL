@@ -57,7 +57,7 @@ public class UpdateMgr : Singleton<UpdateMgr> {
     int newVersion = 0;
 
     int checkUpdateInfoProgress = 0;
-    DownloadManager downloadMgr = null;
+    DownloadMgr downloadMgr = null;
 
     UpdateFile oldFiles = null;
     UpdateFile newFiles = null;
@@ -85,7 +85,7 @@ public class UpdateMgr : Singleton<UpdateMgr> {
     public void Begin()
     {
         if (downloadMgr == null)
-            downloadMgr = AppFacade.Instance.GetManager<DownloadManager>(ManagerName.Download);
+            downloadMgr = GameMgr.instance.downloadMgr;
 
         isComplete = false;
         if (AppConst.DebugMode)
@@ -110,14 +110,13 @@ public class UpdateMgr : Singleton<UpdateMgr> {
         localVersion = GetLocalVersion();
         if (AppConst.UpdateMode)
         {
-            LoadLocalUpdateUrl();
+            //LoadLocalUpdateUrl();
             LoadRemoteVersion();
         }
         else
         {
             CheckUpdateInfo();
         }
-        Util.UpdatePlayerLog(1003, localVersion.ToString());
         downloadMgr.LocalDownload.DownloadFile(PathPrefix + Util.AppContentPath() + versionFileName, delegate (string url, string content, bool isError, string error)
         {
             if (isError)
@@ -134,8 +133,6 @@ public class UpdateMgr : Singleton<UpdateMgr> {
     void LoadRemoteVersion()
     {
         string remoteVersionPath = updateWebFullUrl + versionFileName;
-        if (AppConst.DebugUpdateVersion)
-            remoteVersionPath = updateWebFullUrl + "debugversion.txt";
         DownloadRemoteFile(remoteVersionPath + RandTime, delegate (string url, string content, bool isError, string error)
         {
             if (isError)
@@ -595,10 +592,8 @@ public class UpdateMgr : Singleton<UpdateMgr> {
             Debug.Log("update res complete");
             if(androidRestart)
             {
-                PlatformInstance.RestartActivity(0);
-                return;
+                
             }
-            Util.UpdatePlayerLog(1004);
         }
         else if (errorCode == EUpdateErrorCode.debugMode)
         {
@@ -614,7 +609,7 @@ public class UpdateMgr : Singleton<UpdateMgr> {
         {
             OnErrorAciton("update res error:" + errorCode + ":" + errorStr);
         }
-        //HideUI();
+        HideUI();
         if (ActionComplete != null)
             ActionComplete();
     }
@@ -716,7 +711,7 @@ public class UpdateMgr : Singleton<UpdateMgr> {
                 {
                     AssetBundle ab = AssetBundle.LoadFromMemory(bytes);
                     _uiUpdatePackName = FairyGUI.UIPackage.AddPackage(ab).name;
-                    FairyGUI.GObject uiGobj = FairyGUI.UIPackage.CreateObject(_uiUpdatePackName, "ui_Update");
+                    FairyGUI.GObject uiGobj = FairyGUI.UIPackage.CreateObject(_uiUpdatePackName, "Update");
                     _uiUpdate = new UIUpdate();
 
                     _uiUpdate.contentPane = uiGobj.asCom;

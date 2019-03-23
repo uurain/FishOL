@@ -364,6 +364,27 @@ public class Util
         return path;
     }
 
+    /// <summary>
+    /// 应用程序内容路径
+    /// </summary>
+    public static string AppContentNoFilePath()
+    {
+        string path = string.Empty;
+        switch (Application.platform)
+        {
+            case RuntimePlatform.Android:
+                path = "jar:file://" + Application.dataPath + "!/assets/";
+                break;
+            case RuntimePlatform.IPhonePlayer:
+                path = Application.dataPath + "/Raw/";
+                break;
+            default:
+                path = Application.dataPath + "/" + AppConst.AssetDir + "/";
+                break;
+        }
+        return path;
+    }
+
     public static void Log(string str)
     {
         Debug.Log(str);

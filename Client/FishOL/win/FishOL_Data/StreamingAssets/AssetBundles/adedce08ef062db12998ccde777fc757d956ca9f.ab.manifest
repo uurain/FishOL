@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 2658580152
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4a2c1da98a048c25139469b42bf8bf13
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0c4dbd735f83fc5ab5b493c72f28dbeb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 533f7b243964e014bb4b0e48542c4d95, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/AbAsset/Fish/fish_7.prefab
+Dependencies: []

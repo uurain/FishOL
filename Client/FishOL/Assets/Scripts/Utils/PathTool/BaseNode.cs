@@ -64,7 +64,10 @@ public class BaseNode : MonoBehaviour
 
     public Material GetColorMat(int index)
     {
+#if UNITY_EDITOR
         return UnityEditor.AssetDatabase.LoadAssetAtPath<Material>(string.Format("Assets/Art/mat/{0}.mat", BaseNode.INITMATPATH[index]));
+#endif
+        return null;
     }
 
     public void OnDrawGizmos()

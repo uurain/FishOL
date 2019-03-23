@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <image id="n0_herw" name="n0" src="herw1" fileName="changjing2.jpg" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n1_herw" name="ProBar" src="herw2" fileName="ProgressBar.xml" xy="295,628" size="743,14" group="n3_herw">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <text id="n2_herw" name="MainText" xy="662,571" pivot="0.5,0.5" size="10,39" group="n3_herw" fontSize="30" color="#ffffff" align="center" vAlign="middle" text=""/>
+    <group id="n3_herw" name="n3" xy="295,571" size="743,71" advanced="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+  </displayList>
+</component>

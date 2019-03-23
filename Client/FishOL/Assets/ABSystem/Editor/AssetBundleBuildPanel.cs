@@ -16,10 +16,12 @@ namespace Tangzx.ABSystem
             GetWindow<AssetBundleBuildPanel>("ABSystem", true);
         }
 
-        [MenuItem("ABSystem/Builde Lua")]
-        static void BuildLuaFile()
+        [MenuItem("ABSystem/Build_Config")]
+        public static void BuildRes()
         {
+            Debug.Log("BuildRes");
             LuaBuild.HandleLuaFile();
+            DiffGameRes.BuildAllFiles(0);
         }
 
         [MenuItem("ABSystem/Builde AssetBundles")]
@@ -49,6 +51,73 @@ namespace Tangzx.ABSystem
             builder.Export();
             builder.End();
 
+            BuildUIUpdate();
+            DiffGameRes.BuildAllFiles(0);
+        }
+
+        [MenuItem("ABSystem/Build UpdateUI")]
+        static void BuildUIUpdate()
+        {
+
+            AssetBundleBuildConfig config = LoadAssetAtPath<AssetBundleBuildConfig>(savePath);
+            if (config == null)
+                return;
+
+            string updateAbCachedPath = Application.dataPath + "/AssetBundles/updateCached.txt";
+            Dictionary<string, string> cachedMd5 = new Dictionary<string, string>();
+            if (File.Exists(updateAbCachedPath))
+            {
+                string[] cachedStrs = File.ReadAllLines(updateAbCachedPath);
+                for (int i = 0; i < cachedStrs.Length; ++i)
+                {
+                    string[] temps = cachedStrs[i].Split(':');
+                    cachedMd5[temps[0]] = temps[1];
+                }
+            }
+
+            string SavePath = Application.streamingAssetsPath + "/AssetBundles/";
+            string[] StrPaths = Directory.GetFiles(Application.dataPath + "/UIUpdate");
+            List<Object> ListAssetsObj = new List<Object>();
+            bool needBuild = false;
+            int updateChildCount = 0;
+            List<string> cacheInfoList = new List<string>();
+            for (int i = 0; i < StrPaths.Length; i++)
+            {
+                string StrExtension = Path.GetExtension(StrPaths[i]);
+                if (StrExtension == ".meta")
+                    continue;
+                updateChildCount++;
+                string XdStrPath = StrPaths[i].Substring(StrPaths[i].LastIndexOf("/Assets") + 1).Replace('\\', '/');
+
+                string md5Str = Util.md5file(XdStrPath);
+                if (!cachedMd5.ContainsKey(XdStrPath) || cachedMd5[XdStrPath] != md5Str)
+                {
+                    needBuild = true;
+                }
+                Object obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(XdStrPath);
+                string info = string.Format("{0}:{1}", XdStrPath, Util.md5file(XdStrPath));
+                cacheInfoList.Add(info);
+                Debug.Log(info);
+                ListAssetsObj.Add(obj);
+            }
+            if (updateChildCount != cachedMd5.Count)
+            {
+                needBuild = true;
+            }
+            Debug.Log("need build UIUpdate:" + needBuild);
+            needBuild = true;
+            if (needBuild)
+            {
+                StreamWriter sw = new StreamWriter(updateAbCachedPath);
+                for (int i = 0; i < cacheInfoList.Count; ++i)
+                {
+                    sw.WriteLine(cacheInfoList[i]);
+                }
+                sw.Close();
+
+                Debug.Log("build update ui");
+                BuildPipeline.BuildAssetBundle(null, ListAssetsObj.ToArray(), SavePath + "UIUpdate.ab", BuildAssetBundleOptions.ChunkBasedCompression, EditorUserBuildSettings.activeBuildTarget);
+            }
         }
 
         static T LoadAssetAtPath<T>(string path) where T : Object

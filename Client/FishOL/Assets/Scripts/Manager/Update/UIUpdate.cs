@@ -22,12 +22,12 @@ public class UIUpdate : Window {
         this.SetSize(GRoot.inst.width, GRoot.inst.height);
         MainProBar=contentPane.GetChild("ProBar").asProgress;
         MainText = contentPane.GetChild("MainText").asTextField;
-        checkBox = contentPane.GetChild("checkBox").asCom;
-        checkBoxText1 = checkBox.GetChild("text1").asTextField;
-        checkBoxText2 = checkBox.GetChild("text2").asTextField;
-        btnCancel = checkBox.GetChild("btnCancel").asButton;
-        btnConfirm = checkBox.GetChild("btnConfirm").asButton;
-        checkBox.visible = false;
+        //checkBox = contentPane.GetChild("checkBox").asCom;
+        //checkBoxText1 = checkBox.GetChild("text1").asTextField;
+        //checkBoxText2 = checkBox.GetChild("text2").asTextField;
+        //btnCancel = checkBox.GetChild("btnCancel").asButton;
+        //btnConfirm = checkBox.GetChild("btnConfirm").asButton;
+        //checkBox.visible = false;
 
         MainProBar.value = 0;
         MainText.text = "";
@@ -43,6 +43,8 @@ public class UIUpdate : Window {
 
     public void ShowCheckBox(string tip1, string tip2, System.Action cancelAction, System.Action confirmAction)
     {
+        confirmAction();
+        return;
         checkBoxText1.text = tip1;
         checkBoxText2.text = tip2;
         checkBox.visible = true;

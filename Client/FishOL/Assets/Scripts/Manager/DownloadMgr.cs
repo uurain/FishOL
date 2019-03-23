@@ -46,7 +46,7 @@ public class DownloadMgr : MonoBehaviour
     void Start()
     {
 
-        StartCoroutine(SetList());
+    
     }
     void LateUpdate()
     {
@@ -178,7 +178,7 @@ public class DownloadMgr : MonoBehaviour
             }
             yield return null;
         }
-        if (WebRequest.isError || timeOut || WebRequest.responseCode != 200)
+        if (WebRequest.isNetworkError || timeOut || WebRequest.responseCode != 200)
         {
             string errorContent = "";
             if (timeOut)

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7c4egdcf" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="herw0" name="Update.xml" path="/" exported="true"/>
+    <image id="herw1" name="changjing2.jpg" path="/"/>
+    <component id="herw2" name="ProgressBar.xml" path="/" exported="true"/>
+    <image id="herw4" name="p2.png" path="/" exported="true" scale="9grid" scale9grid="10,4,121,4" qualityOption="source"/>
+    <image id="herw5" name="p3.png" path="/" exported="true" qualityOption="source"/>
+  </resources>
+  <publish name="Update" path="D:\unityProj\FishOL\FishOL\Client\FishOL\Assets\UIUpdate"/>
+</packageDescription>
